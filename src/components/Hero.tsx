@@ -7,13 +7,57 @@ import { motion, AnimatePresence } from "motion/react";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { PRODUCTS } from "../constants";
+import craftPaper from "../../Images/Craft_paper.png";
+import duplexBoard from "../../Images/Duplex_board.png";
+import writingPaper from "../../Images/Writing_paper.png";
+import paperBags from "../../Images/Paper_bags.png";
+import pizzaBox from "../../Images/Pizza_box_new.png";
+import corrugatedCarton from "../../Images/corrugated_carton.png";
+
+const SLIDES = [
+  {
+    image: pizzaBox,
+    name: "Pizza Box",
+    description: "Sturdy and grease-resistant pizza boxes engineered for food-safe packaging with excellent print quality and structural integrity.",
+  },
+  {
+    image: paperBags,
+    name: "Paper Bags",
+    description: "Eco-friendly and durable paper bags crafted for retail, packaging, and industrial use with superior strength and finish.",
+  },
+  {
+    image: corrugatedCarton,
+    name: "Corrugated Carton",
+    description: "Heavy-duty corrugated cartons offering superior protection and structural strength — the ideal packaging solution for industrial and retail shipments.",
+  },
+  {
+    image: craftPaper,
+    name: "Craft Paper",
+    description: "Premium quality craft paper engineered for strength and versatility across industrial packaging applications.",
+  },
+  {
+    image: duplexBoard,
+    name: "Duplex Board",
+    description: "High-grade multilayer coated duplex boards engineered for excellent stiffness and stellar multicolor offset printing.",
+  },
+  {
+    image: writingPaper,
+    name: "Writing & Printing Paper",
+    description: "High-brightness premium paper crafted from eco-responsible fiber, perfect for textbooks, journals, and office demands.",
+  },
+  // ...PRODUCTS.map((p) => ({
+  //   image: p.images[0],
+  //   name: p.name,
+  //   description: p.description,
+  // })),
+];
 
 export default function Hero({ onExploreClick }: { onExploreClick: () => void }) {
   const [currentIdx, setCurrentIdx] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIdx((prev) => (prev + 1) % PRODUCTS.length);
+      setCurrentIdx((prev) => (prev + 1) % SLIDES.length);
     }, 5000);
     return () => clearInterval(timer);
   }, []);
@@ -51,9 +95,9 @@ export default function Hero({ onExploreClick }: { onExploreClick: () => void })
                 Explore Range
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-lg font-bold text-slate-700 border border-slate-300 hover:bg-slate-100 transition-all">
+              {/* <button className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-lg font-bold text-slate-700 border border-slate-300 hover:bg-slate-100 transition-all">
                 Download Catalog
-              </button>
+              </button> */}
             </div>
 
             <div className="mt-16 flex items-center gap-8">
@@ -90,27 +134,27 @@ export default function Hero({ onExploreClick }: { onExploreClick: () => void })
                   transition={{ duration: 0.6 }}
                   className="absolute inset-0"
                 >
-                  <img 
-                    src={PRODUCTS[currentIdx].images[currentIdx % PRODUCTS[currentIdx].images.length]} 
-                    alt={PRODUCTS[currentIdx].name}
+                  <img
+                    src={SLIDES[currentIdx].image}
+                    alt={SLIDES[currentIdx].name}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
                   <div className="absolute bottom-8 left-8 right-8">
                     <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl">
-                      <h3 className="text-white font-bold text-xl mb-1">{PRODUCTS[currentIdx].name}</h3>
+                      <h3 className="text-white font-bold text-xl mb-1">{SLIDES[currentIdx].name}</h3>
                       <p className="text-white/80 text-sm line-clamp-2">
-                        {PRODUCTS[currentIdx].description}
+                        {SLIDES[currentIdx].description}
                       </p>
                     </div>
                   </div>
                 </motion.div>
               </AnimatePresence>
-              
+
               {/* Slider Indicators */}
               <div className="absolute top-8 right-8 flex gap-2">
-                {PRODUCTS.map((_, idx) => (
-                  <div 
+                {SLIDES.map((_, idx) => (
+                  <div
                     key={idx}
                     className={`h-1 rounded-full transition-all duration-300 ${
                       idx === currentIdx ? "w-8 bg-blue-500" : "w-2 bg-white/30"
