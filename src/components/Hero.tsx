@@ -9,9 +9,9 @@ import { useState, useEffect } from "react";
 import { PRODUCTS } from "../constants";
 import craftPaper from "../../Images/Craft_paper.png";
 import duplexBoard from "../../Images/Duplex_board.png";
-import writingPaper from "../../Images/Writing_paper.png";
+import writingPaper from "../../Images/Writing_paper1.png";
 import paperBags from "../../Images/Paper_bags.png";
-import pizzaBox from "../../Images/Pizza_box_new.png";
+import pizzaBox from "../../Images/Pizza_box.png";
 import corrugatedCarton from "../../Images/corrugated_carton.png";
 
 const SLIDES = [
@@ -63,7 +63,7 @@ export default function Hero({ onExploreClick }: { onExploreClick: () => void })
   }, []);
 
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-slate-50">
+    <section className="relative min-h-[90vh] flex items-center pt-[20px] overflow-hidden bg-slate-50">
       {/* Background patterns */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-blue-50/50 skew-x-12 translate-x-1/2" />
@@ -77,10 +77,10 @@ export default function Hero({ onExploreClick }: { onExploreClick: () => void })
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-widest mb-6">
+            {/* <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-widest mb-6">
               <span className="w-2 h-2 rounded-full bg-blue-600" />
               Precision Engineered Materials
-            </div>
+            </div> */}
             <h1 className="text-6xl md:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-8">
               The Gold Standard in <span className="text-blue-600">Manufacturing.</span>
             </h1>

@@ -53,15 +53,15 @@ export default function ProductItemCard({ product, onInquire }: ProductItemCardP
         {/* Navigation Controls */}
         {product.images.length > 1 && (
           <>
-            <button 
+            <button
               onClick={prevImage}
-              className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/10 backdrop-blur-md text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white/20"
+              className="absolute left-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-gray-300/70 backdrop-blur-md text-gray-700 opacity-0 group-hover:opacity-100 transition-opacity hover:bg-gray-400/80"
             >
               <ChevronLeft size={18} />
             </button>
-            <button 
+            <button
               onClick={nextImage}
-              className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/10 backdrop-blur-md text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-white/20"
+              className="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full bg-gray-300/70 backdrop-blur-md text-gray-700 opacity-0 group-hover:opacity-100 transition-opacity hover:bg-gray-400/80"
             >
               <ChevronRight size={18} />
             </button>

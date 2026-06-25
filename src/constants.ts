@@ -3,6 +3,34 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import machinery1 from "../Images/Machinery1.png";
+import cartonMaker from "../Images/Carton_maker.jpg";
+import bookProduction from "../Images/book_production.png";
+import convertingMachine from "../Images/converting_machine.png";
+import packagingMachine from "../Images/packaging_machine.png";
+import duplexBoard from "../Images/Duplex_board.png";
+import writingPaper from "../Images/writing_paper1.png";
+import craftPaper from "../Images/Craft_paper.png";
+import newsprintPaper from "../Images/newsprint_paper1.png"
+import paperBags from "../Images/Paper_bags.png";
+import pizzaBox from "../Images/Pizza_box.png";
+import corrugatedCarton from "../Images/packaging_box.png";
+import sosBags from "../Images/SOS_bags.png"
+import sosBag1 from "../Images/sos_bags1.png"
+import kraftBag from "../Images/kraft_bag.png"
+import whiteBag from "../Images/white_bags.png"
+import BrownPizzaCarton from "../Images/brown_pizza_carton.png"
+import SicilianPizzaBrown from "../Images/sicilian_pizza_brown.png"
+import SicilianPizzaWhite from "../Images/sicilian_pizza_white.png"
+import WhitePizzaCarton from "../Images/white_pizza_carton.png"
+import ThermalPaper from "../Images/thermal_paper1.png"
+import ThermalPaper1 from "../Images/thermal_paper.png"
+import CompositionBook from "../Images/composition_book.png"
+import OneSubjectBook from "../Images/one_subject.png"
+import OneSubjectBook1 from "../Images/one_subject1.png"
+import ThreeSubjectBook from "../Images/three_subject.png"
+import FiveSubjectBook from "../Images/five_subject.png"
+
 export interface ProductCategory {
   id: string;
   name: string;
@@ -23,39 +51,51 @@ export interface ProductItem {
 
 export const CATEGORIES: ProductCategory[] = [
   {
-    id: "duplex-board",
-    name: "Coated Duplex Board",
-    description: "High-grade multilayer coated duplex boards in Grey Back and White Back options, engineered for excellent stiffness and stellar multicolor offset printing.",
-    image: "https://images.unsplash.com/photo-1595079676339-1534801ad6cf?auto=format&fit=crop&q=80&w=800",
+    id: "machinery",
+    name: "Machinery",
+    description: "Complete turnkey machinery solutions for paper making, corrugated carton manufacturing, book making, and packaging conversion - supplied on semi-automatic and fully automatic configurations.",
+    image: machinery1,
     keyFeatures: [
-      "Optimal GSM: 180 to 450",
-      "Clay-coated gloss finish",
-      "Pneumatically starch-sized",
-      "Stiff folding retention"
+      "Turnkey project supply",
+      "30 TPD to 150 TPD capacity range",
+      "Semi-automatic & fully automatic options",
+      "Recycled fiber compatible systems"
     ]
   },
   {
-    id: "writing-paper",
-    name: "Writing & Printing Paper",
-    description: "High-brightness super-calendered premium paper sheets crafted from eco-responsible fiber. Perfect for textbooks, journals, and office demands.",
-    image: "https://images.unsplash.com/photo-1586075010633-2470fd205d6a?auto=format&fit=crop&q=80&w=800",
+    id: "paper-and-boards",
+    name: "Paper and Boards",
+    description: "A complete range of paper and board products including Coated Duplex Boards, Writing & Printing Papers, and Industrial Kraft Papers - manufactured for packaging, printing, and industrial applications.",
+    image: duplexBoard,
     keyFeatures: [
-      "90% to 94% ISO Brightness",
-      "Woodfree chemical base",
-      "Excellent double-side opacity",
-      "Optimized tensile tear indexes"
+      "Coated Duplex Boards",
+      "Writing & Printing Papers",
+      "Industrial Kraft Papers",
+      "Eco-certified sustainable fiber base"
     ]
   },
   {
-    id: "kraft-paper",
-    name: "Industrial Kraft Paper",
-    description: "Robust high-bursting factor kraft paper roll stocks designed for robust packaging, corrugation sheet fluting, and protective packaging wrappers.",
-    image: "https://images.unsplash.com/photo-1603513492128-ba7bc9b3e143?auto=format&fit=crop&q=80&w=800",
+    id: "paper-bags",
+    name: "Paper Bags",
+    description: "A complete range of paper bags including SOS Bags, Kraft Paper Bags, and White Paper Bags — available in various sizes as per customer requirements with multicolour printing options.",
+    image: paperBags,
     keyFeatures: [
-      "22 BF to 35 BF rating",
-      "Superb tear resistance",
-      "100% recyclable fiber base",
-      "Uniform moisture balance"
+      "SOS Bags in sizes #1 to #25",
+      "Kraft & White Paper Bags",
+      "Twisted, Flat or No Handle options",
+      "Up to 4 Colour Printing available"
+    ]
+  },
+  {
+    id: "pizza-cartons",
+    name: "Pizza Cartons",
+    description: "A complete range of pizza cartons and corrugated cartons including Brown, Sicilian, and White Pizza Cartons — available with up to 4 colour customized printing and shrink wrap export packing.",
+    image: pizzaBox,
+    keyFeatures: [
+      "Brown & White Pizza Cartons",
+      "Sicilian Pizza (13 x 17 inch)",
+      "Corrugated Cartons (3 Ply, 5 Ply or Specialised)",
+      "Upto 4 Colour Customized Printing"
     ]
   },
   {
@@ -73,221 +113,480 @@ export const CATEGORIES: ProductCategory[] = [
 ];
 
 export const PRODUCTS: ProductItem[] = [
-  // --- Coated Duplex Board Category ---
+  // --- Duplex Board Category ---
   {
-    id: "eco-greyback",
-    categoryId: "duplex-board",
-    name: "EcoLuxe Greyback Duplex Board",
-    description: "Multi-layered duplex board featuring a clay-coated white printing surface and a sturdy recycled greyback side. Extremely popular for fast-moving packing industries.",
-    images: [
-      "https://images.unsplash.com/photo-1595079676339-1534801ad6cf?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1512412046876-0c46442efbd6?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1589739900243-4b53ce1b1df3?auto=format&fit=crop&q=80&w=800"
-    ],
+    id: "duplex-board",
+    categoryId: "paper-and-boards",
+    name: "Coated Duplex Board",
+    description: "High-grade multilayer coated duplex boards in Grey Back and White Back options, engineered for excellent stiffness and stellar multicolor offset printing.",
+    images: [duplexBoard],
     specifications: {
       "GSM Range": "230 GSM - 450 GSM",
-      "Coat Weight": "18 - 22 g/m²",
-      "Brightness": "78% - 82% ISO",
-      "Stiffness (MD)": "Up to 520 mN.m",
-      "Moisture": "6.5% - 7.5%"
+      "Quality": "HWC – Grey Back, HWC – White Back, LWC – Grey Back",
+      "Packing": "In Reels. Sheets in Bundles & Pallets"
     },
     applications: [
-      "Cosmetics packaging cartons",
-      "FMCG product boxes",
-      "Matchbox outer sleeves",
-      "Toiletry & Soap outer wraps"
-    ]
-  },
-  {
-    id: "ultra-whiteback",
-    categoryId: "duplex-board",
-    name: "UltraWhite Whiteback Duplex Board",
-    description: "Premium duplex board with multi-clay coating on the front and a bleached clean white back side. Designed for luxury product validation and sterile hygiene requirements.",
-    images: [
-      "https://images.unsplash.com/photo-1589739900243-4b53ce1b1df3?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1595079676339-1534801ad6cf?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&q=80&w=800"
-    ],
-    specifications: {
-      "GSM Range": "200 GSM - 400 GSM",
-      "Coat Weight": "20 - 24 g/m²",
-      "Brightness": "84% - 88% ISO",
-      "White Back Brightness": "72% - 75% ISO",
-      "Stiffness (CD)": "Up to 240 mN.m"
-    },
-    applications: [
+      "Cosmetics & FMCG packaging cartons",
       "Pharmaceutical kits & medical boxes",
-      "High-end perfume and retail gifts",
       "Premium confectionery boxes",
       "Electronics appliance packages"
     ]
   },
   {
-    id: "glidecoat-barrier",
-    categoryId: "duplex-board",
-    name: "GlideCoat Oil & Water Barrier Board",
-    description: "Specialty duplex board integrated with a certified organic barrier formula resistant to moisture, oils, and grease seepage. Biodegradable and perfect for food boxes.",
-    images: [
-      "https://images.unsplash.com/photo-1512412046876-0c46442efbd6?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1603513492128-ba7bc9b3e143?auto=format&fit=crop&q=80&w=800"
-    ],
+    id: "writing-paper",
+    categoryId: "paper-and-boards",
+    name: "Writing & Printing Paper",
+    description: "High-brightness super-calendered premium paper sheets crafted from eco-responsible fiber. Perfect for textbooks, journals, and office demands.",
+    images: [writingPaper],
     specifications: {
-      "GSM Range": "250 GSM - 425 GSM",
-      "Barrier Rating": "3M KIT Test Value 8+",
-      "COBB Value (60s)": "Under 30 g/m²",
-      "Food Safety Cert": "FDA Compliant"
-    },
-    applications: [
-      "Frozen food dry cartoons",
-      "Cake, bakery, and pizza packaging",
-      "Quick-service restaurant containers",
-      "Takeaway dry catering packs"
-    ]
-  },
-
-  // --- Writing & Printing Paper Category ---
-  {
-    id: "aquaflow-maplitho",
-    categoryId: "writing-paper",
-    name: "AquaFlow Silk Maplitho Paper",
-    description: "High-density woodfree paper with stellar dimensional stability, specifically treated for fast high-speed rotary printing offset machinery without fluffing.",
-    images: [
-      "https://images.unsplash.com/photo-1586075010633-2470fd205d6a?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&q=80&w=800"
-    ],
-    specifications: {
-      "GSM Range": "60 GSM - 120 GSM",
-      "ISO Brightness": "92% - 94%",
-      "Opacity": "86% - 92%",
-      "Cobb (Top/Wire)": "25 max",
-      "Bulk": "1.20 - 1.25 cm³/g"
+      "GSM Range": "50 GSM - 100 GSM",
+      "Quality": "Brightness 80/85/90 Degree",
+      "Packing": "In Reels. Sheets in Bundles"
     },
     applications: [
       "School & university textbooks",
       "Informational booklets and catalogs",
-      "Multicolor maps and atlas sheets",
-      "Office invoices and statement folders"
+      "Corporate letterheads & certificates",
+      "Office invoices and documentation"
     ]
   },
   {
-    id: "supersmooth-woodfree",
-    categoryId: "writing-paper",
-    name: "SuperSmooth Woodfree Copy Master",
-    description: "Premium ultra-calendered un-coated woodfree sheet. Delivers a soft tactile experience, glare-free readability, and reliable ink setting parameters.",
-    images: [
-      "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1586075010633-2470fd205d6a?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=800"
-    ],
+    id: "kraft-paper",
+    categoryId: "paper-and-boards",
+    name: "Industrial Kraft Paper",
+    description: "Robust high-bursting factor kraft paper roll stocks designed for robust packaging, corrugation sheet fluting, and protective packaging wrappers.",
+    images: [craftPaper],
     specifications: {
-      "GSM Range": "70 GSM - 100 GSM",
-      "Smoothness": "150 ml/min Bendtsen",
-      "Tear Index (MD)": "Up to 5.2 mN.m²/g",
-      "pH Value": "Alkaline (Acid-Free)"
+     "GSM Range": "50 GSM - 350 GSM",
+      "Quality": "Differenr grades for Papers Bags & Corrugated Cartons",
+      "Packing": "In Reels"
     },
     applications: [
-      "Premium office documentation",
-      "Reading books & premium novels",
-      "Corporate letterheads & certificates",
-      "High-density multi-page manuals"
+      "Food and Beverage packaging",
+      "Corrugated shipping cartons",
+      "Parcel protective wrapping",
+      "Cargo protection"
+    ]
+  },
+  {
+    id: "newsprint-paper",
+    categoryId: "paper-and-boards",
+    name: "Newsprint Paper",
+    description: "Standard newsprint paper supplied in reels, available in various grades suited for high-speed web offset printing for newspapers and publication use.",
+    images: [newsprintPaper],
+    specifications: {
+      "GSM Range": "40 GSM - 48 GSM",
+      "Quality": "Various Grades",
+      "Packing": "Reels of Standard Size"
+    },
+    applications: [
+      "Newspaper & various publication papers"
+    ]
+  },
+  {
+    id: "thermal-rolls",
+    categoryId: "paper-and-boards",
+    name: "Thermal Rolls",
+    description: "High-quality imported thermal paper rolls available in Standard Register, One Ply, Two Ply, and Three Ply configurations. Sourced from premium manufacturers including Kohler, Mitsubishi, and Hansol for superior print quality and reliability.",
+    images: [ThermalPaper, ThermalPaper1],
+    specifications: {
+      "GSM Range": "42 GSM - 48 GSM",
+      "Quality": "Imported from Kohler, Mitsubishi, Hansol",
+      "Ply Options": "Standard Register Rolls, One Ply, Two Ply, Three Ply Rolls",
+      "Packing": "Seaworth Corrugated Cartons"
+    },
+    applications: [
+      "Point of Sale (POS) and cash register printing",
+      "ATM receipt and transaction printing",
+      "Fax machine operations",
+      "Thermal ticket and label printing",
+      "Receipt and billing systems"
     ]
   },
 
-  // --- Industrial Kraft Paper Category ---
+  // --- Paper Bags Category ---
   {
-    id: "fortress-kraft",
-    categoryId: "kraft-paper",
-    name: "Fortress Heavy-Duty Kraft Roll",
-    description: "Engineered wrapper grade kraft roll stock. Features pristine long-fiber consistency resulting in premium bursting indicators, perfect for industrial wrapping.",
-    images: [
-      "https://images.unsplash.com/photo-1627389955805-720619756182?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1603513492128-ba7bc9b3e143?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1595079676339-1534801ad6cf?auto=format&fit=crop&q=80&w=800"
-    ],
+    id: "sos-bags",
+    categoryId: "paper-bags",
+    name: "SOS Bags",
+    description: "Self-opening SOS paper bags available in a wide range of sizes to suit customer requirements, commonly used for retail and food packaging.",
+    images: [sosBag1, sosBags],
     specifications: {
-      "GSM Range": "80 GSM - 200 GSM",
-      "Bursting Factor": "28 BF - 35 BF",
-      "Shatter Point": "Double critical fold limit",
-      "Moisture standard": "7.0% nominal"
+      "Sizes": "1 to 25",
+      "Size Options": "Various sizes as per Customers requirement",
+      "Color": "Brown"
     },
     applications: [
-      "Cement bags and fertilizer sacks",
-      "Heavy envelope lining panels",
-      "Parcel protective wrapping",
-      "Metal plate protective dividers"
+      "Retail & grocery packaging",
+      "Food & bakery packaging",
+      "Pharmacy & medical packaging",
+      "General merchandise bags"
     ]
   },
   {
-    id: "corrugrid-fluting",
-    categoryId: "kraft-paper",
-    name: "CorruGrid Fluted Medium Stock",
-    description: "Specialized resilient corrugating medium base offering highly stable ring crush levels. Essential for establishing the architectural core in box flutes.",
-    images: [
-      "https://images.unsplash.com/photo-1603513492128-ba7bc9b3e143?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=800"
-    ],
+    id: "kraft-paper-bags",
+    categoryId: "paper-bags",
+    name: "Kraft Paper Bags",
+    description: "Durable Kraft paper bags available in various sizes with a choice of handle styles and up to 4 colour printing for branded packaging solutions.",
+    images: [kraftBag],
     specifications: {
-      "GSM Range": "110 GSM - 180 GSM",
-      "Burst Factor": "22 BF - 25 BF",
-      "RCT (Ring Crush Test)": "1.30 kN/m at 150 GSM",
-      "Fiber type": "100% Recycled Semi-Chemical"
+      "Size Options": "Various sizes as per Customers requirement",
+      "Handle Options": "Twisted Handles, Flat Handle or without Handle",
+      "Printing": "Upto 4 Colour Printing Can Be Done"
     },
     applications: [
-      "A, B, C & E tier flute liners",
-      "Internal partition grids for glasswares",
-      "Corrugated shipping cartons",
-      "Shock absorbency paper cushions"
+      "Retail shopping bags",
+      "Food & restaurant takeaway",
+      "Gift & boutique packaging",
+      "Corporate branded bags"
+    ]
+  },
+  {
+    id: "white-paper-bags",
+    categoryId: "paper-bags",
+    name: "White Paper Bags",
+    description: "Premium white paper bags available in various sizes with handle options and up to 4 colour printing, ideal for high-end retail and branded packaging.",
+    images: [whiteBag],
+    specifications: {
+      "Size Options": "Various sizes as per Customers requirement",
+      "Handle Options": "Twisted Handles, Flat Handle or without Handle",
+      "Printing": "Upto 4 Colour Printing Can Be Done"
+    },
+    applications: [
+      "Luxury retail & boutique bags",
+      "Pharmaceutical packaging",
+      "Cosmetics & gift packaging",
+      "Branded promotional bags"
+    ]
+  },
+
+  // --- Pizza Cartons Category ---
+  {
+    id: "brown-pizza-cartons",
+    categoryId: "pizza-cartons",
+    name: "Brown Pizza Cartons",
+    description: "Sturdy brown kraft pizza cartons available in sizes 10 inch to 18 inch with customized printing and shrink wrap export packing.",
+    images: [BrownPizzaCarton],
+    specifications: {
+      "Size": "10 Inch to 18 Inch",
+      "Printing": "Upto 4 Colour Customized Printing Available",
+      "Packing": "Shrink Wrap Packing Export"
+    },
+    applications: [
+      "Pizza delivery & takeaway packaging",
+      "Restaurant & QSR carton boxes",
+      "Export food packaging",
+      "Branded pizza box printing"
+    ]
+  },
+  {
+    id: "sicilian-pizza",
+    categoryId: "pizza-cartons",
+    name: "Sicilian Pizza",
+    description: "Rectangular Sicilian pizza cartons in standard 13 x 17 inch size with customized printing and shrink wrap export packing.",
+    images: [SicilianPizzaWhite,SicilianPizzaBrown],
+    specifications: {
+      "Size": "13 x 17 Inch",
+      "Printing": "Upto 4 Colour Customized Printing Available",
+      "Packing": "Shrink Wrap Packing Export"
+    },
+    applications: [
+      "Sicilian & rectangular pizza packaging",
+      "Restaurant & QSR carton boxes",
+      "Export food packaging",
+      "Branded pizza box printing"
+    ]
+  },
+  {
+    id: "white-pizza-cartons",
+    categoryId: "pizza-cartons",
+    name: "White Pizza Cartons",
+    description: "Premium white pizza cartons available in sizes 10 inch to 18 inch with customized printing and shrink wrap export packing.",
+    images: [WhitePizzaCarton],
+    specifications: {
+      "Size": "10 Inch to 18 Inch",
+      "Printing": "Upto 4 Colour Customized Printing Available",
+      "Packing": "Shrink Wrap Packing Export"
+    },
+    applications: [
+      "Premium pizza delivery packaging",
+      "Branded restaurant boxes",
+      "Export food packaging",
+      "High-end pizza box printing"
+    ]
+  },
+  {
+    id: "corrugated-cartons",
+    categoryId: "pizza-cartons",
+    name: "Corrugated Cartons",
+    description: "Heavy-duty corrugated cartons available in 3 Ply, 5 Ply or Specialised configurations with customized printing and shrink wrap export packing.",
+    images: [corrugatedCarton],
+    specifications: {
+      "Type": "3 Ply, 5 Ply or Specialised Carton",
+      "Printing": "Upto 4 Colour Customized Printing Available",
+      "Packing": "Shrink Wrap Packing Export"
+    },
+    applications: [
+      "Industrial & retail corrugated packaging",
+      "E-commerce shipping cartons",
+      "Export-grade packaging boxes",
+      "FMCG & logistics carton supply"
+    ]
+  },
+
+  // --- Machinery Category ---
+  {
+    id: "paper-making-machinery",
+    categoryId: "machinery",
+    name: "Kraft Paper, Duplex Board & Tissue Paper Making Machinery",
+    description: "Complete turnkey paper making plant supplied on project basis for manufacturing Kraft Paper, Duplex Board, and Tissue Paper. Engineered around recycled fiber furnishes with full civil, mechanical, electrical, and commissioning support included from 30 TPD to 150 TPD capacity scales.",
+    images: [machinery1],
+    specifications: {
+      "Capacity Range": "30 TPD to 150 TPD",
+      "Raw Material": "100% Recycled Fibers",
+      "Supply Basis": "Complete Turnkey Project",
+      "Output Grades": "Kraft Paper, Duplex Board, Tissue Paper",
+      "Commissioning": "Included with full civil & mechanical support"
+    },
+    applications: [
+      "Kraft paper & packaging board mills",
+      "Duplex board manufacturing units",
+      "Tissue paper production facilities",
+      "Recycled fiber processing plants"
+    ]
+  },
+  {
+    id: "corrugated-carton-plant",
+    categoryId: "machinery",
+    name: "Corrugated Carton Making Plant",
+    description: "Complete semi-automatic and fully automatic plant for the end-to-end manufacture of corrugated cartons. Encompasses single-facer, double-facer, slitter-scorer, rotary die-cutter, folder-gluer, and bundling line, configurable to client production volumes and carton dimensions.",
+    images: [cartonMaker],
+    specifications: {
+      "Automation Level": "Semi-Automatic & Fully Automatic",
+      "Flute Profiles": "A, B, C, E & F Flute",
+      "Max Board Width": "Up to 2500 mm",
+      "Production Speed": "Up to 150 m/min (automatic line)",
+      "Supply Scope": "Complete plant with installation"
+    },
+    applications: [
+      "Industrial corrugated box manufacturing",
+      "E-commerce & retail packaging units",
+      "Export-grade corrugated carton plants",
+      "FMCG and logistics packaging factories"
+    ]
+  },
+  {
+    id: "exercise-book-plant",
+    categoryId: "machinery",
+    name: "Exercise Book & Composition Book Making Plant",
+    description: "End-to-end book making line for manufacturing exercise books and composition books in semi-automatic and fully automatic configurations. Line covers roll sheeting, ruling, gathering, stitching, cover feeding, pressing, and trimming — delivering finished books ready for retail or bulk supply.",
+    images: [bookProduction],
+    specifications: {
+      "Automation Level": "Semi-Automatic & Fully Automatic",
+      "Book Sizes": "A4, A5, Long Book & Custom Sizes",
+      "Page Count Range": "32 to 200 Pages",
+      "Production Output": "Up to 60 books/min (automatic)",
+      "Binding Method": "Centre-pin stitching & perfect binding options"
+    },
+    applications: [
+      "School exercise & composition book factories",
+      "Stationery export manufacturing units",
+      "Government notebook supply projects",
+      "Branded premium notebook production lines"
+    ]
+  },
+  {
+    id: "packaging-converting-machinery",
+    categoryId: "machinery",
+    name: "Packaging & Converting Machinery",
+    description: "A comprehensive range of paper converting and packaging machines including Slitter-Rewinders, Sheet Cutters, and Waste Paper Baling Presses. Each machine is available as standalone units or as integrated converting lines suited for paper mills, converters, and recycling operations.",
+    images: [convertingMachine, packagingMachine],
+    specifications: {
+      "Machine Types": "Slitter-Rewinder, Sheet Cutter, Baling Press",
+      "Slitter Speed": "Up to 800 m/min",
+      "Sheet Cutter Output": "Up to 200 cuts/min",
+      "Baling Press Capacity": "2 to 6 bales/hour",
+      "Supply Format": "Standalone units or integrated line"
+    },
+    applications: [
+      "Paper mill slitting & rewinding operations",
+      "Sheet cutting for offset & copier paper",
+      "Waste paper baling for recycling facilities",
+      "Packaging converting & finishing plants"
     ]
   },
 
   // --- Stationery & Office Products Category ---
   {
-    id: "scribe-hardback",
+    id: "composition-book",
     categoryId: "stationery",
-    name: "Scribe Executive Hardbound Journal",
-    description: "Luxurious heavy-cover binding registers. Utilizes woodfree bright pH-neutral cream inner writing paper designed for fluid fountain pens and high longevity.",
-    images: [
-      "https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&q=80&w=800"
-    ],
+    name: "Composition Book",
+    description: "Quality composition books with sturdy binding, perfect for students and professionals. Features reliable sewn binding and durable covers for everyday use.",
+    images: [CompositionBook],
     specifications: {
-      "Sheet Count": "160 Pages - 240 Pages",
-      "Inner Paper density": "80 GSM bright woodfree",
-      "Cover binding": "Acid-free heavy hardback board",
-      "Bleed resistance": "Water/gel pen proof design"
+      "Size": "9.75\" x 7.5\"",
+      "Sheet Count": "100 sheets",
+      "Packaging": "6 pc shrink / 48 pc carton"
     },
     applications: [
-      "Industrial laboratory log books",
-      "Executive corporate dairy logging",
-      "Custom accounts journals",
-      "Bespoke guest registries"
+      "Student note-taking",
+      "Class composition writing",
+      "Exercise books for schools",
+      "Academic record keeping"
     ]
   },
   {
-    id: "optima-copier",
+    id: "1-subject-book",
     categoryId: "stationery",
-    name: "Optima Premium Copier A4 Pack",
-    description: "Anti-jam, dust-free cut copier sheets styled in compact outer shrink packs. Delivers clean printing on all major industrial laser or ink copier brands.",
+    name: "1 Subject Book",
+    description: "Single-subject notebook ideal for focused note-taking and organized learning across all academic levels.",
+    images: [OneSubjectBook, OneSubjectBook1],
+    specifications: {
+      "Size": "10.5\" x 8\"",
+      "Sheet Count": "70 sheets",
+      "Packaging": "6 pc shrink / 48 pc carton"
+    },
+    applications: [
+      "Single-subject classroom notes",
+      "Subject-specific study material",
+      "Student exercise books",
+      "Academic organization"
+    ]
+  },
+  {
+    id: "3-subject-book",
+    categoryId: "stationery",
+    name: "3 Subject Book",
+    description: "Multi-subject notebook with dividers for managing three different subjects or topics in one convenient notebook.",
+    images: [ThreeSubjectBook],
+    specifications: {
+      "Size": "10.5\" x 8\"",
+      "Sheet Count": "120 sheets",
+      "Packaging": "4 pc shrink / 48 pc carton"
+    },
+    applications: [
+      "Multi-subject classroom organization",
+      "College & university notes",
+      "Cross-curricular studies",
+      "Organized student documentation"
+    ]
+  },
+  {
+    id: "5-subject-book",
+    categoryId: "stationery",
+    name: "5 Subject Book",
+    description: "Comprehensive five-subject notebook designed for students managing multiple courses or subjects simultaneously with organized section dividers.",
+    images: [FiveSubjectBook],
+    specifications: {
+      "Size": "10.5\" x 8\"",
+      "Sheet Count": "150 sheets",
+      "Packaging": "3 pc shrink / 36 pc carton"
+    },
+    applications: [
+      "Heavy course load organization",
+      "College & university use",
+      "Professional multi-topic documentation",
+      "Comprehensive subject management"
+    ]
+  },
+  {
+    id: "colouring-book",
+    categoryId: "stationery",
+    name: "Colouring Book",
+    description: "Creative colouring books available in multiple variants including basic colouring, alphabet designs, big colouring, and giant activity books for all ages.",
     images: [
-      "https://images.unsplash.com/photo-1586075010633-2470fd205d6a?auto=format&fit=crop&q=80&w=800",
-      "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1586075010633-2470fd205d6a?auto=format&fit=crop&q=80&w=800"
+    ],
+    specifications: {
+      "Variants": "Colouring Book, Colouring Alphabet, Big Colouring Book, Giant Colouring & Activity Book",
+      "Packaging": "12 pieces in shrink"
+    },
+    applications: [
+      "Children's creative activities",
+      "Preschool & kindergarten learning",
+      "Alphabet learning & recognition",
+      "Artistic development & entertainment"
+    ]
+  },
+  {
+    id: "filler-paper-100",
+    categoryId: "stationery",
+    name: "Filler Paper 100 Sheets",
+    description: "High-quality ruled filler paper for replacement refills and supplementary note-taking in standard notebooks and binders.",
+    images: [
+      "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&q=80&w=800"
+    ],
+    specifications: {
+      "Size": "10.5\" x 8\"",
+      "Sheet Count": "100 sheets",
+      "Packaging": "60 pack per carton"
+    },
+    applications: [
+      "Notebook refills",
+      "Binder supplementary pages",
+      "Extra writing paper supply",
+      "School & office use"
+    ]
+  },
+  {
+    id: "writing-tablet",
+    categoryId: "stationery",
+    name: "Writing Tablet",
+    description: "Compact writing tablets with premium quality paper, ideal for portable note-taking and sketching.",
+    images: [
       "https://images.unsplash.com/photo-1512412046876-0c46442efbd6?auto=format&fit=crop&q=80&w=800"
     ],
     specifications: {
-      "Density": "75 GSM & 80 GSM options",
-      "ISO Brightness": "96% Super White",
-      "Pack sheets": "500 sheets per bundle",
-      "Moisture rating": "4.5% precision level"
+      "Size": "6\" x 9\"",
+      "Sheet Count": "100 sheets",
+      "Packaging": "12 pcs shrink / 96 pcs per carton"
     },
     applications: [
-      "High volume xerox copying",
-      "Laser and inkjet office printing",
-      "Double-sided scanning workflows",
-      "Daily fax and drafting reports"
+      "Portable note-taking",
+      "Sketching & drawing",
+      "On-the-go documentation",
+      "Travel writing pads"
+    ]
+  },
+  {
+    id: "legal-pads-pack-3",
+    categoryId: "stationery",
+    name: "Legal Pads Pack of 3",
+    description: "Practical pack of 3 legal pads with ruled pages, perfect for office, legal, and professional documentation needs.",
+    images: [
+      "https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?auto=format&fit=crop&q=80&w=800"
+    ],
+    specifications: {
+      "Size": "5\" x 8\"",
+      "Sheet Count": "25 sheets per pad",
+      "Packaging": "3 pcs shrink / 98 pcs per carton"
+    },
+    applications: [
+      "Legal & professional documentation",
+      "Office note-taking",
+      "Meeting notes & minutes",
+      "Business correspondence"
+    ]
+  },
+  {
+    id: "100-index-card",
+    categoryId: "stationery",
+    name: "100 Index Card",
+    description: "Premium quality index cards available in white and coloured options with plain and ruled formats for organizing information and flashcard learning.",
+    images: [
+      "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&q=80&w=800"
+    ],
+    specifications: {
+      "Size": "4\" x 6\" & 5\" x 3\"",
+      "Sheet Count": "100 sheets",
+      "Variants": "White & Coloured; Plain & Ruled",
+      "Packaging": "100 sheet/pack / 72 pack/carton"
+    },
+    applications: [
+      "Flashcard learning & studying",
+      "Information organization & filing",
+      "Reference card creation",
+      "Student study materials"
     ]
   }
 ];
