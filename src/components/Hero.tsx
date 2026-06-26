@@ -80,13 +80,13 @@ export default function Hero({ onExploreClick }: { onExploreClick: () => void })
               <span className="w-2 h-2 rounded-full bg-blue-600" />
               Precision Engineered Materials
             </div> */}
-            <h1 className="text-6xl md:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-8">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-6 sm:mb-8">
               The Gold Standard in <span className="text-blue-600">Manufacturing.</span>
-            </h1>
-            <p className="text-xl text-slate-600 leading-relaxed mb-10 max-w-xl">
+            </h2>
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-8 sm:mb-10 max-w-xl">
               MP Fiber & Paper Mills Limited (MPF) delivers high-performance solutions for global industrial sectors. Durable, sustainable, and innovation-led manufacturing excellence.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 mt-4">
               <button 
                 onClick={onExploreClick}
                 className="group flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-blue-700 transition-all shadow-xl shadow-blue-200"
@@ -99,19 +99,19 @@ export default function Hero({ onExploreClick }: { onExploreClick: () => void })
               </button> */}
             </div>
 
-            <div className="mt-16 flex items-center gap-8">
+            <div className="mt-8 sm:mt-14 flex flex-wrap items-center gap-6 sm:gap-8">
               <div className="flex flex-col">
-                <span className="text-3xl font-extrabold text-blue-600">45+</span>
+                <span className="text-2xl sm:text-3xl font-extrabold text-blue-600">45+</span>
                 <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Years Excellence</span>
               </div>
-              <div className="w-px h-10 bg-slate-200" />
+              <div className="w-px h-8 sm:h-10 bg-slate-200" />
               <div className="flex flex-col">
-                <span className="text-3xl font-extrabold text-blue-600">500+</span>
+                <span className="text-2xl sm:text-3xl font-extrabold text-blue-600">500+</span>
                 <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Client Projects</span>
               </div>
-              <div className="w-px h-10 bg-slate-200" />
+              <div className="w-px h-8 sm:h-10 bg-slate-200" />
               <div className="flex flex-col">
-                <span className="text-3xl font-extrabold text-blue-600">ISO</span>
+                <span className="text-2xl sm:text-3xl font-extrabold text-blue-600">ISO</span>
                 <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">9001:2015 Cert.</span>
               </div>
             </div>

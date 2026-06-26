@@ -83,15 +83,15 @@ export default function ProductItemCard({ product, onInquire }: ProductItemCardP
       </div>
 
       {/* Product Info Panel */}
-      <div className="p-8 flex-1 flex flex-col justify-between">
+      <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
         <div>
-          <div className="flex items-center gap-2 mb-3">
+          <div className="flex items-center gap-2 mb-2.5">
             <span className="p-1 px-2.5 rounded bg-blue-50 text-blue-600 font-bold uppercase tracking-wider text-[9px] flex items-center gap-1">
               <Tag size={10} /> Certified Grade
             </span>
           </div>
-          <h3 className="text-2xl font-extrabold text-slate-900 mb-3">{product.name}</h3>
-          <p className="text-slate-600 text-sm leading-relaxed mb-6">
+          <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 mb-2.5">{product.name}</h3>
+          <p className="text-slate-600 text-sm leading-relaxed mb-5 sm:mb-6">
             {product.description}
           </p>
 

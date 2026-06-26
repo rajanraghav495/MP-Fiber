@@ -62,10 +62,10 @@ export default function About() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-5">
+          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mb-4 sm:mb-5">
             A trusted global exporter in paper, board, and packaging
           </h2>
-          <p className="max-w-3xl text-lg text-slate-600 leading-relaxed">
+          <p className="max-w-3xl text-base sm:text-lg text-slate-600 leading-relaxed">
             We combine deep industry expertise, export credibility, and turnkey project experience to deliver high-quality solutions across paper mills, packaging equipment, and stationery products.
           </p>
         </motion.div>

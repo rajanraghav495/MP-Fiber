@@ -67,7 +67,7 @@ export default function Contact({ prefilledSubject = "" }: ContactProps) {
   };
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <motion.div
@@ -75,13 +75,18 @@ export default function Contact({ prefilledSubject = "" }: ContactProps) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-8">Connect With Us</h2>
-            <p className="text-lg text-slate-600 mb-12 max-w-md font-medium">
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mb-6 sm:mb-8">Connect With Us</h2>
+            <p className="text-base sm:text-lg text-slate-600 mb-8 sm:mb-12 max-w-md font-medium">
               Have a question about our industrial solutions or want to discuss a large-scale contract partnership? Our engineering team is ready to assist.
             </p>
 
-            <div className="space-y-8">
-              <div className="flex gap-6">
+            <div className="space-y-8 mt-12">
+              <a
+                href="https://www.google.com/maps/place/MPFIBERS+LLC/@19.1057205,72.8461116,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7c9c7ff71ffc5:0xcaa1b1438128864b!8m2!3d19.1057205!4d72.8461116!16s%2Fg%2F11crzszdnt?hl=en-US&entry=ttu&g_ep=EgoyMDI2MDYyMy4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-6 rounded-2xl transition-colors hover:bg-slate-50/80"
+              >
                 <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-blue-600 shrink-0 shadow-sm">
                   <MapPin size={24} />
                 </div>
@@ -89,7 +94,7 @@ export default function Contact({ prefilledSubject = "" }: ContactProps) {
                   <h4 className="font-bold text-slate-900 mb-1">Regional Headquarters</h4>
                   <p className="text-slate-600 text-sm">403, Vireshwar Chambers, M.G.Road, Vile Parle (E), Mumbai - 400057, India.</p>
                 </div>
-              </div>
+              </a>
 
               <div className="flex gap-6">
                 <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-blue-600 shrink-0 shadow-sm">

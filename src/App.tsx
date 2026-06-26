@@ -66,44 +66,44 @@ export default function App() {
                 <Hero onExploreClick={() => handlePageNavigation("products")} />
 
                 {/* Industrial Highlights Metric Section */}
-                <section className="py-12 bg-white border-b border-slate-200">
-                  <div className="max-w-7xl mx-auto px-10">
-                    <div className="max-w-3xl mb-14">
+                <section className="py-14 sm:py-16 bg-white border-b border-slate-200">
+                  <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+                    <div className="max-w-3xl mb-10 sm:mb-12">
                       <span className="text-[10px] uppercase font-extrabold tracking-widest text-blue-600 block mb-2">Our Footprint</span>
-                      <h2 className="text-3xl font-extrabold text-slate-900 mb-4">Enterprise Highlights</h2>
-                      <p className="text-slate-500 text-sm">Empowering industrial packaging and offset printers across south-east Asia with consistent mill-grade materials.</p>
+                      <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-3">Enterprise Highlights</h2>
+                      <p className="text-slate-500 text-sm leading-relaxed">Empowering industrial packaging and offset printers across south-east Asia with consistent mill-grade materials.</p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                      <div className="p-8 bg-slate-50 rounded-2xl border border-slate-200">
-                        <div className="w-10 h-10 rounded bg-blue-50 text-blue-600 flex items-center justify-center mb-6">
-                          <Building size={20} />
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+                      <div className="p-5 sm:p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                        <div className="w-9 h-9 rounded bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
+                          <Building size={18} />
                         </div>
-                        <h4 className="text-4xl font-black text-slate-900 mb-2">250K+ TN</h4>
-                        <h5 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-3">Annual Plant Yield</h5>
-                        <p className="text-slate-600 text-xs leading-relaxed">
+                        <h4 className="text-2xl sm:text-3xl font-black text-slate-900 mb-1.5">250K+ TN</h4>
+                        <h5 className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">Annual Plant Yield</h5>
+                        <p className="text-slate-600 text-sm leading-relaxed">
                           State-of-the-art continuous refining lines operating at maximum capacity to satisfy market volumes.
                         </p>
                       </div>
 
-                      <div className="p-8 bg-slate-50 rounded-2xl border border-slate-200">
-                        <div className="w-10 h-10 rounded bg-blue-50 text-blue-600 flex items-center justify-center mb-6">
-                          <Briefcase size={20} />
+                      <div className="p-5 sm:p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                        <div className="w-9 h-9 rounded bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
+                          <Briefcase size={18} />
                         </div>
-                        <h4 className="text-4xl font-black text-slate-900 mb-2">99.8%</h4>
-                        <h5 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-3">On-Time Logistics</h5>
-                        <p className="text-slate-600 text-xs leading-relaxed">
+                        <h4 className="text-2xl sm:text-3xl font-black text-slate-900 mb-1.5">99.8%</h4>
+                        <h5 className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">On-Time Logistics</h5>
+                        <p className="text-slate-600 text-sm leading-relaxed">
                           Secure container packaging, reliable regional transport, and meticulous freight scheduling controls.
                         </p>
                       </div>
 
-                      <div className="p-8 bg-slate-50 rounded-2xl border border-slate-200">
-                        <div className="w-10 h-10 rounded bg-blue-50 text-blue-600 flex items-center justify-center mb-6">
-                          <FileCheck2 size={20} />
+                      <div className="p-5 sm:p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                        <div className="w-9 h-9 rounded bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
+                          <FileCheck2 size={18} />
                         </div>
-                        <h4 className="text-4xl font-black text-slate-900 mb-2">ISO 9001</h4>
-                        <h5 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-3">Total Quality Certified</h5>
-                        <p className="text-slate-600 text-xs leading-relaxed">
+                        <h4 className="text-2xl sm:text-3xl font-black text-slate-900 mb-1.5">ISO 9001</h4>
+                        <h5 className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">Total Quality Certified</h5>
+                        <p className="text-slate-600 text-sm leading-relaxed">
                           Strict testing protocols from raw fiber grading up to finished reel shipment roll checks.
                         </p>
                       </div>
@@ -112,12 +112,12 @@ export default function App() {
                 </section>
 
                 {/* Primary Capabilities Teaser Grid */}
-                <section className="py-12 bg-slate-50 border-b border-slate-200">
-                  <div className="max-w-7xl mx-auto px-10">
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-16">
+                <section className="py-14 sm:py-16 bg-slate-50 border-b border-slate-200">
+                  <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-10 sm:mb-12">
                       <div>
                         <span className="text-[10px] uppercase font-extrabold tracking-widest text-blue-600 block mb-2">Industrial Solutions</span>
-                        <h2 className="text-4xl font-extrabold text-slate-900 tracking-tight">Core Product Segments</h2>
+                        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Core Product Segments</h2>
                       </div>
                       <button 
                         onClick={() => handlePageNavigation("products")}
@@ -139,11 +139,11 @@ export default function App() {
                 </section>
 
                 {/* Services Section */}
-                <section className="py-12 bg-white border-b border-slate-200">
-                  <div className="max-w-7xl mx-auto px-10">
-                    <div className="max-w-3xl mb-14">
+                <section className="py-14 sm:py-16 bg-white border-b border-slate-200">
+                  <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+                    <div className="max-w-3xl mb-10 sm:mb-12">
                       <span className="text-[10px] uppercase font-extrabold tracking-widest text-blue-600 block mb-2">Services</span>
-                      <h2 className="text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Export and import solutions tailored for the paper and packaging industry</h2>
+                      <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-3">Export and import solutions tailored for the paper and packaging industry</h2>
                       <p className="text-slate-600 text-sm leading-relaxed">
                         We support clients with turnkey project delivery, specialized paper products, stationery, packaging essentials, and sourcing solutions for pulp and paper mill requirements.
                       </p>
@@ -151,12 +151,12 @@ export default function App() {
 
                     <div className="grid gap-8 lg:grid-cols-2">
                       <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm">
-                        <div className="flex items-center gap-3 mb-6">
-                          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-600 text-white">
-                            <FileText size={20} />
+                        <div className="flex items-center gap-3 mb-5 sm:mb-6">
+                          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-600 text-white">
+                            <FileText size={18} />
                           </div>
                           <div>
-                            <h3 className="text-2xl font-semibold text-slate-900">Export</h3>
+                            <h3 className="text-xl font-semibold text-slate-900">Export</h3>
                             <p className="text-sm text-slate-500">Turnkey support for mills, paper products, and stationery</p>
                           </div>
                         </div>
@@ -170,12 +170,12 @@ export default function App() {
                       </div>
 
                       <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm">
-                        <div className="flex items-center gap-3 mb-6">
-                          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-600 text-white">
-                            <Factory size={20} />
+                        <div className="flex items-center gap-3 mb-5 sm:mb-6">
+                          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-600 text-white">
+                            <Factory size={18} />
                           </div>
                           <div>
-                            <h3 className="text-2xl font-semibold text-slate-900">Import</h3>
+                            <h3 className="text-xl font-semibold text-slate-900">Import</h3>
                             <p className="text-sm text-slate-500">Raw materials and machinery sourcing from global markets</p>
                           </div>
                         </div>
@@ -213,9 +213,9 @@ export default function App() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.4 }}
-                className="py-12 bg-slate-50 min-h-[70vh]"
+                className="py-14 sm:py-16 bg-slate-50 min-h-[70vh]"
               >
-                <div className="max-w-7xl mx-auto px-10">
+                <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
                   {/* Breadcrumb Header */}
                   <div className="flex flex-wrap items-center gap-2 mb-8 text-xs font-semibold uppercase tracking-widest text-slate-500">
                     <button 
@@ -263,7 +263,7 @@ export default function App() {
                     // Show Category Listing Grid
                     <div>
                       <div className="mb-16 max-w-2xl">
-                        <h2 className="text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">Product Categories</h2>
+                        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-3 tracking-tight">Product Categories</h2>
                         <p className="text-slate-600 text-sm">
                           Select an industrial category to browse custom spec sheets, verified GSM ranges, tear resistances, and sub-grade catalog lists.
                         </p>
@@ -286,7 +286,7 @@ export default function App() {
                             <span className="p-1 px-2.5 rounded bg-blue-50 text-blue-600 font-extrabold uppercase tracking-wider text-[9px]">
                               Active Segment
                             </span>
-                            <h2 className="text-4xl font-black text-slate-900 mt-2 mb-4 tracking-tight">{activeCategory?.name}</h2>
+                            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mt-2 mb-3 tracking-tight">{activeCategory?.name}</h2>
                             <p className="text-slate-600 text-base leading-relaxed">
                               {activeCategory?.description}
                             </p>
@@ -340,15 +340,15 @@ export default function App() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.4 }}
               >
-                <div className="bg-slate-50 border-b border-slate-200 py-16">
-                  <div className="max-w-7xl mx-auto px-10">
+                {/* <div className="bg-slate-50 border-b border-slate-200 py-16">
+                  <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
                     <span className="text-[10px] uppercase font-extrabold tracking-widest text-blue-600 block mb-2">Inquiry Desk</span>
-                    <h1 className="text-5xl font-black text-slate-900 tracking-tight">Contact & Contracting</h1>
-                    <p className="text-slate-550 max-w-xl text-sm leading-relaxed mt-4">
+                    <h1 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Contact & Contracting</h1>
+                    <p className="text-slate-600 max-w-xl text-sm leading-relaxed mt-3 sm:mt-4">
                       Submit precise structural wrapping or printing specs to our engineers to process customized material reels.
                     </p>
                   </div>
-                </div>
+                </div> */}
                 <Contact prefilledSubject={inquirySubject} />
               </motion.div>
             )}
