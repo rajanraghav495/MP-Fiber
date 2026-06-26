@@ -14,6 +14,8 @@ type ContactProps = {
 export default function Contact({ prefilledSubject = "" }: ContactProps) {
   const [subject, setSubject] = useState(prefilledSubject);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,15 +28,42 @@ export default function Contact({ prefilledSubject = "" }: ContactProps) {
     }
   }, [prefilledSubject]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate API Submission
-    setIsSuccess(true);
-    setTimeout(() => {
-      setIsSuccess(false);
-      setFormData({ name: "", email: "", message: "" });
-      setSubject("");
-    }, 4000);
+    setIsSubmitting(true);
+    setSubmitError("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject,
+          message: formData.message
+        })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || "Unable to submit your inquiry right now.");
+      }
+
+      setIsSuccess(true);
+      setTimeout(() => {
+        setIsSuccess(false);
+        setFormData({ name: "", email: "", message: "" });
+        setSubject("");
+      }, 4000);
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : "Unable to submit your inquiry right now.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -58,7 +87,7 @@ export default function Contact({ prefilledSubject = "" }: ContactProps) {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 mb-1">Regional Headquarters</h4>
-                  <p className="text-slate-600 text-sm">2, New Palasia, Indore, Madhya Pradesh 452001, India</p>
+                  <p className="text-slate-600 text-sm">403, Vireshwar Chambers, M.G.Road, Vile Parle (E), Mumbai - 400057, India.</p>
                 </div>
               </div>
 
@@ -68,7 +97,7 @@ export default function Contact({ prefilledSubject = "" }: ContactProps) {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 mb-1">Direct Line</h4>
-                  <p className="text-slate-600 text-sm">+91 731 123 4567 | +91 731 987 6543</p>
+                  <p className="text-slate-600 text-sm">+91 22 66964302 | +91 22 67983728</p>
                 </div>
               </div>
 
@@ -78,7 +107,7 @@ export default function Contact({ prefilledSubject = "" }: ContactProps) {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 mb-1">Official Inquiry</h4>
-                  <p className="text-slate-600 text-sm">sales@mpfiber.com | info@mpfiber.com</p>
+                  <p className="text-slate-600 text-sm">info@mpfiber.com | mpfiber53@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -156,10 +185,17 @@ export default function Contact({ prefilledSubject = "" }: ContactProps) {
                 />
               </div>
 
-              <button className="flex items-center justify-center gap-3 w-full bg-blue-600 hover:bg-blue-700 text-white py-5 rounded-xl font-bold shadow-xl shadow-blue-600/20 hover:translate-y-[-2px] transition-all uppercase tracking-widest text-xs">
-                Submit Inquiry
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="flex items-center justify-center gap-3 w-full bg-blue-600 hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70 text-white py-5 rounded-xl font-bold shadow-xl shadow-blue-600/20 hover:translate-y-[-2px] transition-all uppercase tracking-widest text-xs"
+              >
+                {isSubmitting ? "Sending..." : "Submit Inquiry"}
                 <Send size={18} />
               </button>
+              {submitError ? (
+                <p className="text-sm text-red-600 text-center">{submitError}</p>
+              ) : null}
             </form>
           </motion.div>
         </div>

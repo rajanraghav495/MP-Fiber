@@ -66,9 +66,9 @@ export default function App() {
                 <Hero onExploreClick={() => handlePageNavigation("products")} />
 
                 {/* Industrial Highlights Metric Section */}
-                <section className="py-12 bg-white border-b border-slate-150">
+                <section className="py-12 bg-white border-b border-slate-200">
                   <div className="max-w-7xl mx-auto px-10">
-                    <div className="text-center mb-16 max-w-2xl mx-auto">
+                    <div className="max-w-3xl mb-14">
                       <span className="text-[10px] uppercase font-extrabold tracking-widest text-blue-600 block mb-2">Our Footprint</span>
                       <h2 className="text-3xl font-extrabold text-slate-900 mb-4">Enterprise Highlights</h2>
                       <p className="text-slate-500 text-sm">Empowering industrial packaging and offset printers across south-east Asia with consistent mill-grade materials.</p>
