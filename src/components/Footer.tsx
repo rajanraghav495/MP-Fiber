@@ -16,7 +16,7 @@ export default function Footer() {
               <img src={logo} alt="MP Fiber Logo" className="h-14 w-auto object-contain" />
             </div>
             <p className="text-xs leading-relaxed mb-6">
-              The gold standard in precision-engineered industrial materials since 1999. ISO-Certified quality and sustainable production processes.
+              The gold standard in precision-engineered industrial materials since 1978. ISO-Certified quality and sustainable production processes.
             </p>
             <div className="flex gap-4">
               <a href="#" className="p-2 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors text-white">

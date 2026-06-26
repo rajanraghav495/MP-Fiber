@@ -20,7 +20,6 @@ export default function Navbar({ activeSection, onNavClick }: NavbarProps) {
     { name: "Home", id: "home" },
     { name: "About", id: "about" },
     { name: "Products", id: "products" },
-    { name: "Machinery", id: "machinery" },
     { name: "Contact", id: "contact" },
   ];
 

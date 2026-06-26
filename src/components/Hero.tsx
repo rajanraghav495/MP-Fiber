@@ -6,13 +6,12 @@
 import { motion, AnimatePresence } from "motion/react";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import { PRODUCTS } from "../constants";
-import craftPaper from "../../Images/Craft_paper.png";
-import duplexBoard from "../../Images/Duplex_board.png";
-import writingPaper from "../../Images/Writing_paper1.png";
+import craftPaper from "../../Images/Products/Craft_paper.png";
+import duplexBoard from "../../Images/Products/Duplex_board.png";
+import writingPaper from "../../Images/Products/writing_paper1.png";
 import paperBags from "../../Images/Paper_bags.png";
 import pizzaBox from "../../Images/Pizza_box.png";
-import corrugatedCarton from "../../Images/corrugated_carton.png";
+import corrugatedCarton from "../../Images/Products/corrugated_carton.png";
 
 const SLIDES = [
   {
@@ -102,7 +101,7 @@ export default function Hero({ onExploreClick }: { onExploreClick: () => void })
 
             <div className="mt-16 flex items-center gap-8">
               <div className="flex flex-col">
-                <span className="text-3xl font-extrabold text-blue-600">25+</span>
+                <span className="text-3xl font-extrabold text-blue-600">45+</span>
                 <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Years Excellence</span>
               </div>
               <div className="w-px h-10 bg-slate-200" />

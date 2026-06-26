@@ -3,33 +3,49 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import machinery1 from "../Images/Machinery1.png";
-import cartonMaker from "../Images/Carton_maker.jpg";
-import bookProduction from "../Images/book_production.png";
-import convertingMachine from "../Images/converting_machine.png";
-import packagingMachine from "../Images/packaging_machine.png";
-import duplexBoard from "../Images/Duplex_board.png";
-import writingPaper from "../Images/writing_paper1.png";
-import craftPaper from "../Images/Craft_paper.png";
-import newsprintPaper from "../Images/newsprint_paper1.png"
+import machinery1 from "../Images/Products/Machinery1.png";
+import cartonMaker from "../Images/Products/Carton_maker.jpg";
+import bookProduction from "../Images/Products/book_production.png";
+import convertingMachine from "../Images/Products/converting_machine.png";
+import packagingMachine from "../Images/Products/packaging_machine.png";
+import duplexBoard from "../Images/Products/Duplex_board.png";
+import writingPaper from "../Images/Products/writing_paper1.png";
+import craftPaper from "../Images/Products/Craft_paper.png";
+import newsprintPaper from "../Images/Products/newsprint_paper1.png"
 import paperBags from "../Images/Paper_bags.png";
 import pizzaBox from "../Images/Pizza_box.png";
-import corrugatedCarton from "../Images/packaging_box.png";
-import sosBags from "../Images/SOS_bags.png"
-import sosBag1 from "../Images/sos_bags1.png"
-import kraftBag from "../Images/kraft_bag.png"
-import whiteBag from "../Images/white_bags.png"
-import BrownPizzaCarton from "../Images/brown_pizza_carton.png"
-import SicilianPizzaBrown from "../Images/sicilian_pizza_brown.png"
-import SicilianPizzaWhite from "../Images/sicilian_pizza_white.png"
-import WhitePizzaCarton from "../Images/white_pizza_carton.png"
-import ThermalPaper from "../Images/thermal_paper1.png"
-import ThermalPaper1 from "../Images/thermal_paper.png"
-import CompositionBook from "../Images/composition_book.png"
-import OneSubjectBook from "../Images/one_subject.png"
-import OneSubjectBook1 from "../Images/one_subject1.png"
-import ThreeSubjectBook from "../Images/three_subject.png"
-import FiveSubjectBook from "../Images/five_subject.png"
+import corrugatedCarton from "../Images/Products/packaging_box.png";
+import sosBags from "../Images/Products/SOS_bags.png"
+import sosBag1 from "../Images/Products/SOS_bags1.png"
+import kraftBag from "../Images/Products/kraft_bag.png"
+import whiteBag from "../Images/Products/white_bags.png"
+import BrownPizzaCarton from "../Images/Products/brown_pizza_carton.png"
+import SicilianPizzaBrown from "../Images/Products/sicilian_pizza_brown.png"
+import SicilianPizzaWhite from "../Images/Products/sicilian_pizza_white.png"
+import WhitePizzaCarton from "../Images/Products/white_pizza_carton.png"
+import ThermalPaper from "../Images/Products/thermal_paper1.png"
+import ThermalPaper1 from "../Images/Products/thermal_paper.png"
+import CompositionBook from "../Images/Products/composition_book.png"
+import OneSubjectBook from "../Images/Products/one_subject.png"
+import OneSubjectBook1 from "../Images/Products/one_subject1.png"
+import ThreeSubjectBook from "../Images/Products/three_subject.png"
+import FiveSubjectBook from "../Images/Products/five_subject.png"
+import ColoringBook from "../Images/Products/coloring_book.png"
+import FillerPaper from "../Images/Products/filler_paper.png"
+import FillerPaper1 from "../Images/Products/filler_paper1.png"
+import WritingTablet from "../Images/Products/writing_tablet.png"
+import LegalPad from "../Images/Products/legal_pad.png"
+import IndexCards from "../Images/Products/index_cards.png"
+import PosterBoard from "../Images/Products/poster_board.png"
+import PosterBoard1 from "../Images/Products/poster_board1.png"
+import Envelope from "../Images/Products/envelop.png"
+import Envelope1 from "../Images/Products/envelop1.png"
+import Envelope2 from "../Images/Products/envelop40.png"
+import YellowPencil from "../Images/Products/yellow_pencil.jfif"
+import EcoPencil from "../Images/Products/eco_pencil.png"
+import ColoringPencils from "../Images/Products/color_pencils.png"
+import FillerPaper150 from "../Images/Products/filler_paper150.png"
+import Stationary from "../Images/stationary.png"
 
 export interface ProductCategory {
   id: string;
@@ -100,9 +116,9 @@ export const CATEGORIES: ProductCategory[] = [
   },
   {
     id: "stationery",
-    name: "Stationery & Office Products",
+    name: "Stationery",
     description: "Premium office stationery, hardcover journals, notebooks, and Copier paper packs manufactured from our own eco-certified mills.",
-    image: "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&q=80&w=800",
+    image: Stationary,
     keyFeatures: [
       "FSC-certified materials",
       "Bleed-resistant high smoothness",
@@ -494,9 +510,7 @@ export const PRODUCTS: ProductItem[] = [
     categoryId: "stationery",
     name: "Colouring Book",
     description: "Creative colouring books available in multiple variants including basic colouring, alphabet designs, big colouring, and giant activity books for all ages.",
-    images: [
-      "https://images.unsplash.com/photo-1586075010633-2470fd205d6a?auto=format&fit=crop&q=80&w=800"
-    ],
+    images: [ColoringBook],
     specifications: {
       "Variants": "Colouring Book, Colouring Alphabet, Big Colouring Book, Giant Colouring & Activity Book",
       "Packaging": "12 pieces in shrink"
@@ -513,9 +527,7 @@ export const PRODUCTS: ProductItem[] = [
     categoryId: "stationery",
     name: "Filler Paper 100 Sheets",
     description: "High-quality ruled filler paper for replacement refills and supplementary note-taking in standard notebooks and binders.",
-    images: [
-      "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&q=80&w=800"
-    ],
+    images: [FillerPaper, FillerPaper1],
     specifications: {
       "Size": "10.5\" x 8\"",
       "Sheet Count": "100 sheets",
@@ -533,9 +545,7 @@ export const PRODUCTS: ProductItem[] = [
     categoryId: "stationery",
     name: "Writing Tablet",
     description: "Compact writing tablets with premium quality paper, ideal for portable note-taking and sketching.",
-    images: [
-      "https://images.unsplash.com/photo-1512412046876-0c46442efbd6?auto=format&fit=crop&q=80&w=800"
-    ],
+    images: [WritingTablet],
     specifications: {
       "Size": "6\" x 9\"",
       "Sheet Count": "100 sheets",
@@ -553,9 +563,7 @@ export const PRODUCTS: ProductItem[] = [
     categoryId: "stationery",
     name: "Legal Pads Pack of 3",
     description: "Practical pack of 3 legal pads with ruled pages, perfect for office, legal, and professional documentation needs.",
-    images: [
-      "https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?auto=format&fit=crop&q=80&w=800"
-    ],
+    images: [LegalPad],
     specifications: {
       "Size": "5\" x 8\"",
       "Sheet Count": "25 sheets per pad",
@@ -573,9 +581,7 @@ export const PRODUCTS: ProductItem[] = [
     categoryId: "stationery",
     name: "100 Index Card",
     description: "Premium quality index cards available in white and coloured options with plain and ruled formats for organizing information and flashcard learning.",
-    images: [
-      "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&q=80&w=800"
-    ],
+    images: [IndexCards],
     specifications: {
       "Size": "4\" x 6\" & 5\" x 3\"",
       "Sheet Count": "100 sheets",
@@ -588,7 +594,133 @@ export const PRODUCTS: ProductItem[] = [
       "Reference card creation",
       "Student study materials"
     ]
-  }
+  },
+  {
+    id: "poster-board",
+    categoryId: "stationery",
+    name: "Poster Board White & Coloured",
+    description: "Durable poster board sheets suitable for display boards, school projects, presentations, and creative mounting applications.",
+    images: [PosterBoard, PosterBoard1],
+    specifications: {
+      "Size": "11\" x 14\" & 22\" x 28\"",
+      "Sheet Count": "25 sheets",
+      "Packaging": "25 pc pack / 4 pack in carton",
+      "Variants": "White & Coloured"
+    },
+    applications: [
+      "School project boards",
+      "Presentation display boards",
+      "Craft and art mounting",
+      "Office signage backing"
+    ]
+  },
+  {
+    id: "white-regular-envelope",
+    categoryId: "stationery",
+    name: "White Regular Envelope",
+    description: "Standard white mailing envelopes designed for letters, documents, and everyday correspondence with reliable closure and presentation.",
+    images: [Envelope],
+    specifications: {
+      "Size": "4-1/8\" x 9-1/2\"",
+      "Quantity": "50 per box",
+      "Packaging": "50 env/box / 24 box in carton"
+    },
+    applications: [
+      "Letters & documents",
+      "Business correspondence",
+      "Invoice and statement mailing",
+      "Personal mail dispatch"
+    ]
+  },
+  {
+    id: "peel-seal-envelope",
+    categoryId: "stationery",
+    name: "40 Peel & Seal Envelopes",
+    description: "Self-sealing envelopes ideal for secure mailing of documents, statements, and important paperwork.",
+    images: [Envelope2,Envelope1],
+    specifications: {
+      "Size": "4-1/8\" x 9-1/2\"",
+      "Quantity": "40 per box",
+      "Packaging": "40 env/box / 24 box in carton"
+    },
+    applications: [
+      "Secure document mailing",
+      "Invoice & statement dispatch",
+      "Office correspondence",
+      "Administrative filing"
+    ]
+  },
+  {
+    id: "yellow-pencil-ferrul",
+    categoryId: "stationery",
+    name: "Yellow Pencil with Ferrul",
+    description: "Classic yellow pencils with ferrules for school, office, and general writing needs in a dependable everyday format.",
+    images: [YellowPencil],
+    specifications: {
+      "Quantity": "10 pcs per pack",
+      "Packaging": "10 pieces in a pack"
+    },
+    applications: [
+      "School writing",
+      "Office note-taking",
+      "Drawing and sketching",
+      "General educational use"
+    ]
+  },
+  {
+    id: "eco-friendly-pencil",
+    categoryId: "stationery",
+    name: "Eco Friendly Pencil",
+    description: "Environmentally conscious pencils available in assorted fun designs for classrooms, crafts, and creative learning.",
+    images: [EcoPencil],
+    specifications: {
+      "Quantity": "10 pcs per pack",
+      "Packaging": "10 pieces in a pack",
+      "Variants": "Plain, Wild Animals, Fruits, Rainbow"
+    },
+    applications: [
+      "Classroom writing",
+      "Children's art activities",
+      "Learning and coloring practice",
+      "Gift and promotional stationery"
+    ]
+  },
+  {
+    id: "colouring-pencils",
+    categoryId: "stationery",
+    name: "Colouring Pencils",
+    description: "Assorted colouring pencils and crayons suited for artistic activities, classroom projects, and creative learning.",
+    images: [ColoringPencils],
+    specifications: {
+      "Quantity": "12 pcs per pack",
+      "Packaging": "12 pcs per pack",
+      "Variants": "12 Assorted Colour Neon Polymer w/ Ferrul, Jumbo Crayon, Colour Crayon, Long Crayon"
+    },
+    applications: [
+      "Art and craft activities",
+      "School coloring projects",
+      "Educational creativity",
+      "Children's stationery kits"
+    ]
+  },
+  {
+    id: "filler-paper-150",
+    categoryId: "stationery",
+    name: "Filler Paper 150 Sheets",
+    description: "Premium filler paper for notebooks, binders, and supplementary study pages in a higher sheet-count format.",
+    images: [FillerPaper150],
+    specifications: {
+      "Size": "10.5\" x 8\"",
+      "Sheet Count": "150 sheets",
+      "Packaging": "48 packs per carton"
+    },
+    applications: [
+      "Notebook refills",
+      "Binder replacement pages",
+      "Student study sheets",
+      "Office documentation support"
+    ]
+  },
 ];
 
 export const MACHINERY = [

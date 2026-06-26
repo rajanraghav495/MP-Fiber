@@ -66,7 +66,7 @@ export default function App() {
                 <Hero onExploreClick={() => handlePageNavigation("products")} />
 
                 {/* Industrial Highlights Metric Section */}
-                <section className="py-20 bg-white border-b border-slate-150">
+                <section className="py-12 bg-white border-b border-slate-150">
                   <div className="max-w-7xl mx-auto px-10">
                     <div className="text-center mb-16 max-w-2xl mx-auto">
                       <span className="text-[10px] uppercase font-extrabold tracking-widest text-blue-600 block mb-2">Our Footprint</span>
@@ -112,7 +112,7 @@ export default function App() {
                 </section>
 
                 {/* Primary Capabilities Teaser Grid */}
-                <section className="py-24 bg-slate-50 border-b border-slate-200">
+                <section className="py-12 bg-slate-50 border-b border-slate-200">
                   <div className="max-w-7xl mx-auto px-10">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-16">
                       <div>
@@ -138,30 +138,52 @@ export default function App() {
                   </div>
                 </section>
 
-                {/* Infrastructure Teaser CTA */}
-                <section className="py-20 bg-white">
+                {/* Services Section */}
+                <section className="py-12 bg-white border-b border-slate-200">
                   <div className="max-w-7xl mx-auto px-10">
-                    <div className="bg-slate-900 rounded-[2.5rem] p-12 text-white relative overflow-hidden border border-slate-800">
-                      <div className="absolute top-0 right-0 w-1/3 h-full opacity-5 pointer-events-none">
-                        <svg viewBox="0 0 100 100" fill="none" className="w-full h-full rotate-12">
-                          <circle cx="50" cy="50" r="40" stroke="white" strokeWidth="2" />
-                          <circle cx="50" cy="50" r="30" stroke="white" strokeWidth="1" />
-                        </svg>
-                      </div>
-                      <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
-                        <div className="max-w-xl">
-                          <span className="px-3 py-1 bg-blue-600 text-white rounded text-[9px] uppercase font-bold tracking-widest inline-block mb-4">Precision Engineering</span>
-                          <h3 className="text-3xl font-extrabold mb-4">Our High-Capacity Infrastructure</h3>
-                          <p className="text-slate-400 text-sm leading-relaxed mb-1">
-                            Equipped with high-performance paper-making machines, double wire continuous Fourdrinier setup, and automated caliber profiling tools.
-                          </p>
+                    <div className="max-w-3xl mb-14">
+                      <span className="text-[10px] uppercase font-extrabold tracking-widest text-blue-600 block mb-2">Services</span>
+                      <h2 className="text-4xl font-extrabold text-slate-900 tracking-tight mb-4">Export and import solutions tailored for the paper and packaging industry</h2>
+                      <p className="text-slate-600 text-sm leading-relaxed">
+                        We support clients with turnkey project delivery, specialized paper products, stationery, packaging essentials, and sourcing solutions for pulp and paper mill requirements.
+                      </p>
+                    </div>
+
+                    <div className="grid gap-8 lg:grid-cols-2">
+                      <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm">
+                        <div className="flex items-center gap-3 mb-6">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-600 text-white">
+                            <FileText size={20} />
+                          </div>
+                          <div>
+                            <h3 className="text-2xl font-semibold text-slate-900">Export</h3>
+                            <p className="text-sm text-slate-500">Turnkey support for mills, paper products, and stationery</p>
+                          </div>
                         </div>
-                        <button 
-                          onClick={() => handlePageNavigation("machinery")}
-                          className="px-8 py-4 bg-white text-slate-900 hover:bg-slate-100 font-bold text-xs uppercase tracking-widest rounded-xl transition-all shadow-xl shadow-black/20 self-start lg:self-auto shrink-0"
-                        >
-                          View Our Machinery
-                        </button>
+                        <ul className="space-y-3 text-sm text-slate-600">
+                          <li className="flex items-start gap-3"><span className="mt-2 h-2 w-2 rounded-full bg-blue-500 shrink-0" />Turnkey project solutions for Kraft Paper, Duplex Board, Tissue Paper, and Writing & Printing Paper plants, with capacities from 5 TPD to 100 TPD.</li>
+                          <li className="flex items-start gap-3"><span className="mt-2 h-2 w-2 rounded-full bg-blue-500 shrink-0" />A diverse range of paper products including Art Paper, Cast Coated Paper, specialty papers, White Lined Chip Board, and Kraft Paper.</li>
+                          <li className="flex items-start gap-3"><span className="mt-2 h-2 w-2 rounded-full bg-blue-500 shrink-0" />Stationery products such as composition books, subject books, counter books, filler papers, index cards, yellow pencils, eco-friendly pencils, crayons, and markers.</li>
+                          <li className="flex items-start gap-3"><span className="mt-2 h-2 w-2 rounded-full bg-blue-500 shrink-0" />Brown paper bags and thermal rolls for credit card terminals, gas stations, ATMs, and similar applications.</li>
+                          <li className="flex items-start gap-3"><span className="mt-2 h-2 w-2 rounded-full bg-blue-500 shrink-0" />Consultancy and chartered engineering services for the pulp, paper, and paperboard industries.</li>
+                        </ul>
+                      </div>
+
+                      <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm">
+                        <div className="flex items-center gap-3 mb-6">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-600 text-white">
+                            <Factory size={20} />
+                          </div>
+                          <div>
+                            <h3 className="text-2xl font-semibold text-slate-900">Import</h3>
+                            <p className="text-sm text-slate-500">Raw materials and machinery sourcing from global markets</p>
+                          </div>
+                        </div>
+                        <ul className="space-y-3 text-sm text-slate-600">
+                          <li className="flex items-start gap-3"><span className="mt-2 h-2 w-2 rounded-full bg-emerald-500 shrink-0" />Waste paper grades including OCC, DSOCC, NDLKC, Mixed Waste, SWL, and other varieties of white paper.</li>
+                          <li className="flex items-start gap-3"><span className="mt-2 h-2 w-2 rounded-full bg-emerald-500 shrink-0" />New and pre-owned pulp and paper mill machinery sourced from Europe, USA, and China.</li>
+                          <li className="flex items-start gap-3"><span className="mt-2 h-2 w-2 rounded-full bg-emerald-500 shrink-0" />A wide range of paper and paperboard grades to suit diverse industrial needs.</li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -178,15 +200,7 @@ export default function App() {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.4 }}
               >
-                <div className="bg-slate-50 border-b border-slate-200 py-16">
-                  <div className="max-w-7xl mx-auto px-10">
-                    <span className="text-[10px] uppercase font-extrabold tracking-widest text-blue-600 block mb-2">Our Identity</span>
-                    <h1 className="text-5xl font-black text-slate-900 tracking-tight">About M.P. Fiber</h1>
-                    <p className="text-slate-550 max-w-xl text-sm leading-relaxed mt-4">
-                      Established with a vision for redefining industrial-grade paper material synthesis, backed by continuous testing rigs and certifications.
-                    </p>
-                  </div>
-                </div>
+                
                 <About />
               </motion.div>
             )}
@@ -248,8 +262,7 @@ export default function App() {
                   {selectedCategoryId === null ? (
                     // Show Category Listing Grid
                     <div>
-                      <div className="text-center mb-16 max-w-2xl mx-auto">
-                        <span className="text-[10px] uppercase font-extrabold tracking-widest text-blue-600 block mb-2">Our Material Engineering</span>
+                      <div className="mb-16 max-w-2xl">
                         <h2 className="text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">Product Categories</h2>
                         <p className="text-slate-600 text-sm">
                           Select an industrial category to browse custom spec sheets, verified GSM ranges, tear resistances, and sub-grade catalog lists.
@@ -315,28 +328,6 @@ export default function App() {
                     </div>
                   )}
                 </div>
-              </motion.div>
-            )}
-
-            {/* ================= MACHINERY INFRASTRUCTURE PAGE ================= */}
-            {currentPage === "machinery" && (
-              <motion.div
-                key="machinery"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.4 }}
-              >
-                <div className="bg-slate-50 border-b border-slate-200 py-16">
-                  <div className="max-w-7xl mx-auto px-10">
-                    <span className="text-[10px] uppercase font-extrabold tracking-widest text-blue-600 block mb-2">Our Plant</span>
-                    <h1 className="text-5xl font-black text-slate-900 tracking-tight">Machinery & Assets</h1>
-                    <p className="text-slate-550 max-w-xl text-sm leading-relaxed mt-4">
-                      Exploring our automatic continuous sizing, high consistency clay-blades, and digital IR caliber diagnostic lines.
-                    </p>
-                  </div>
-                </div>
-                <Machinery />
               </motion.div>
             )}
 
