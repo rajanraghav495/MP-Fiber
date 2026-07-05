@@ -71,7 +71,7 @@ export default function App() {
                     <div className="max-w-3xl mb-10 sm:mb-12">
                       <span className="text-[10px] uppercase font-extrabold tracking-widest text-blue-600 block mb-2">Our Footprint</span>
                       <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-3">Enterprise Highlights</h2>
-                      <p className="text-slate-500 text-sm leading-relaxed">Empowering industrial packaging and offset printers across south-east Asia with consistent mill-grade materials.</p>
+                      <p className="text-slate-500 text-sm leading-relaxed">Supporting international buyers with consistent paper, board, packaging, and stationery supplies through trusted sourcing and export execution.</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
@@ -79,10 +79,10 @@ export default function App() {
                         <div className="w-9 h-9 rounded bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
                           <Building size={18} />
                         </div>
-                        <h4 className="text-2xl sm:text-3xl font-black text-slate-900 mb-1.5">250K+ TN</h4>
-                        <h5 className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">Annual Plant Yield</h5>
+                        <h4 className="text-2xl sm:text-3xl font-black text-slate-900 mb-1.5">Global Reach</h4>
+                        <h5 className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">Export Network</h5>
                         <p className="text-slate-600 text-sm leading-relaxed">
-                          State-of-the-art continuous refining lines operating at maximum capacity to satisfy market volumes.
+                          A dependable sourcing and export network for buyers seeking consistent quality and timely delivery.
                         </p>
                       </div>
 
@@ -90,10 +90,10 @@ export default function App() {
                         <div className="w-9 h-9 rounded bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
                           <Briefcase size={18} />
                         </div>
-                        <h4 className="text-2xl sm:text-3xl font-black text-slate-900 mb-1.5">99.8%</h4>
-                        <h5 className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">On-Time Logistics</h5>
+                        <h4 className="text-2xl sm:text-3xl font-black text-slate-900 mb-1.5">On-Time</h4>
+                        <h5 className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">Export Dispatch</h5>
                         <p className="text-slate-600 text-sm leading-relaxed">
-                          Secure container packaging, reliable regional transport, and meticulous freight scheduling controls.
+                          Secure packing, reliable transport coordination, and meticulous freight scheduling for smooth shipments.
                         </p>
                       </div>
 
@@ -101,10 +101,10 @@ export default function App() {
                         <div className="w-9 h-9 rounded bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
                           <FileCheck2 size={18} />
                         </div>
-                        <h4 className="text-2xl sm:text-3xl font-black text-slate-900 mb-1.5">ISO 9001</h4>
-                        <h5 className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">Total Quality Certified</h5>
+                        <h4 className="text-2xl sm:text-3xl font-black text-slate-900 mb-1.5">Quality Assured</h4>
+                        <h5 className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">Export Standards</h5>
                         <p className="text-slate-600 text-sm leading-relaxed">
-                          Strict testing protocols from raw fiber grading up to finished reel shipment roll checks.
+                          Strict inspection and quality checks from sourcing to final dispatch, supporting dependable export supply.
                         </p>
                       </div>
                     </div>
@@ -145,7 +145,7 @@ export default function App() {
                       <span className="text-[10px] uppercase font-extrabold tracking-widest text-blue-600 block mb-2">Services</span>
                       <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-3">Export and import solutions tailored for the paper and packaging industry</h2>
                       <p className="text-slate-600 text-sm leading-relaxed">
-                        We support clients with turnkey project delivery, specialized paper products, stationery, packaging essentials, and sourcing solutions for pulp and paper mill requirements.
+                        We support clients with paper products, stationery, packaging essentials, and sourcing solutions for international trade requirements.
                       </p>
                     </div>
 
@@ -157,7 +157,7 @@ export default function App() {
                           </div>
                           <div>
                             <h3 className="text-xl font-semibold text-slate-900">Export</h3>
-                            <p className="text-sm text-slate-500">Turnkey support for mills, paper products, and stationery</p>
+                            <p className="text-sm text-slate-500">Trade support for machinery, paper products, packaging, and stationery</p>
                           </div>
                         </div>
                         <ul className="space-y-3 text-sm text-slate-600">
@@ -357,7 +357,7 @@ export default function App() {
         </main>
       </div>
 
-      <Footer />
+      <Footer onNavigate={handlePageNavigation} />
     </div>
   );
 }

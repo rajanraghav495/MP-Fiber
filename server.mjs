@@ -15,8 +15,10 @@ app.get('/api/health', (_req, res) => {
 });
 
 app.post('/api/contact', async (req, res) => {
+  debugger;
   const { name, email, subject, message } = req.body || {};
   const recipient = process.env.CONTACT_TO_EMAIL || 'info@mpfiber.com';
+  const senderEmail = process.env.SMTP_FROM || process.env.SMTP_USER;
 
   if (!name || !email || !subject || !message) {
     return res.status(400).json({
@@ -44,9 +46,9 @@ app.post('/api/contact', async (req, res) => {
     });
 
     await transporter.sendMail({
-      from: process.env.SMTP_FROM || process.env.SMTP_USER,
+      from: senderEmail,
       to: recipient,
-      replyTo: email,
+      //replyTo: email,
       subject: `New inquiry from ${name}: ${subject}`,
       text: [
         `Name: ${name}`,

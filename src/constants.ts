@@ -69,7 +69,7 @@ export const CATEGORIES: ProductCategory[] = [
   {
     id: "machinery",
     name: "Machinery",
-    description: "Complete turnkey machinery solutions for paper making, corrugated carton manufacturing, book making, and packaging conversion - supplied on semi-automatic and fully automatic configurations.",
+    description: "A range of machinery and packaging solutions for paper, corrugated carton, book, and converting applications — available on semi-automatic and fully automatic configurations.",
     image: machinery1,
     keyFeatures: [
       "Turnkey project supply",
@@ -81,7 +81,7 @@ export const CATEGORIES: ProductCategory[] = [
   {
     id: "paper-and-boards",
     name: "Paper and Boards",
-    description: "A complete range of paper and board products including Coated Duplex Boards, Writing & Printing Papers, and Industrial Kraft Papers - manufactured for packaging, printing, and industrial applications.",
+    description: "A complete range of paper and board products including Coated Duplex Boards, Writing & Printing Papers, and Industrial Kraft Papers — for packaging, printing, and industrial applications.",
     image: duplexBoard,
     keyFeatures: [
       "Coated Duplex Boards",
@@ -117,7 +117,7 @@ export const CATEGORIES: ProductCategory[] = [
   {
     id: "stationery",
     name: "Stationery",
-    description: "Premium office stationery, hardcover journals, notebooks, and Copier paper packs manufactured from our own eco-certified mills.",
+    description: "Premium office stationery, hardcover journals, notebooks, and copier paper packs supplied for international buyers and trade requirements.",
     image: Stationary,
     keyFeatures: [
       "FSC-certified materials",
@@ -355,7 +355,7 @@ export const PRODUCTS: ProductItem[] = [
     id: "paper-making-machinery",
     categoryId: "machinery",
     name: "Kraft Paper, Duplex Board & Tissue Paper Making Machinery",
-    description: "Complete turnkey paper making plant supplied on project basis for manufacturing Kraft Paper, Duplex Board, and Tissue Paper. Engineered around recycled fiber furnishes with full civil, mechanical, electrical, and commissioning support included from 30 TPD to 150 TPD capacity scales.",
+    description: "Complete paper making plant solutions supplied on project basis for customers seeking Kraft Paper, Duplex Board, or Tissue Paper production capabilities, with full civil, mechanical, electrical, and commissioning support available from 30 TPD to 150 TPD capacity scales.",
     images: [machinery1],
     specifications: {
       "Capacity Range": "30 TPD to 150 TPD",
@@ -375,7 +375,7 @@ export const PRODUCTS: ProductItem[] = [
     id: "corrugated-carton-plant",
     categoryId: "machinery",
     name: "Corrugated Carton Making Plant",
-    description: "Complete semi-automatic and fully automatic plant for the end-to-end manufacture of corrugated cartons. Encompasses single-facer, double-facer, slitter-scorer, rotary die-cutter, folder-gluer, and bundling line, configurable to client production volumes and carton dimensions.",
+    description: "Complete semi-automatic and fully automatic corrugated carton plant solutions, including single-facer, double-facer, slitter-scorer, rotary die-cutter, folder-gluer, and bundling line options configurable to client production volumes and carton dimensions.",
     images: [cartonMaker],
     specifications: {
       "Automation Level": "Semi-Automatic & Fully Automatic",
@@ -385,7 +385,7 @@ export const PRODUCTS: ProductItem[] = [
       "Supply Scope": "Complete plant with installation"
     },
     applications: [
-      "Industrial corrugated box manufacturing",
+      "Industrial corrugated box supply",
       "E-commerce & retail packaging units",
       "Export-grade corrugated carton plants",
       "FMCG and logistics packaging factories"
@@ -395,7 +395,7 @@ export const PRODUCTS: ProductItem[] = [
     id: "exercise-book-plant",
     categoryId: "machinery",
     name: "Exercise Book & Composition Book Making Plant",
-    description: "End-to-end book making line for manufacturing exercise books and composition books in semi-automatic and fully automatic configurations. Line covers roll sheeting, ruling, gathering, stitching, cover feeding, pressing, and trimming — delivering finished books ready for retail or bulk supply.",
+    description: "End-to-end book making line solutions for exercise books and composition books in semi-automatic and fully automatic configurations, covering roll sheeting, ruling, gathering, stitching, cover feeding, pressing, and trimming for retail or bulk supply requirements.",
     images: [bookProduction],
     specifications: {
       "Automation Level": "Semi-Automatic & Fully Automatic",

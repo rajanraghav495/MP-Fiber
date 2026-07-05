@@ -6,7 +6,11 @@
 import { Mail, Phone, MapPin, Linkedin, Facebook, Twitter, PhoneIcon, Smartphone } from "lucide-react";
 import logo from "../../Images/logo_new.png";
 
-export default function Footer() {
+type FooterProps = {
+  onNavigate?: (pageId: string) => void;
+};
+
+export default function Footer({ onNavigate }: FooterProps) {
   return (
     <footer className="bg-blue-50 text-slate-600 py-16 border-t border-blue-100">
       <div className="max-w-7xl mx-auto px-10">
@@ -34,9 +38,42 @@ export default function Footer() {
           <div>
             <h3 className="text-slate-900 font-bold text-sm mb-6 uppercase tracking-wider">Quick Access</h3>
             <ul className="space-y-4 text-xs text-left">
-              <li><a href="#" className="hover:text-blue-600 transition-colors text-left">Our Product Range</a></li>
-              <li><a href="#" className="hover:text-blue-600 transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-blue-600 transition-colors">Connect With Us</a></li>
+              <li>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate?.("products");
+                  }}
+                  className="hover:text-blue-600 transition-colors text-left"
+                >
+                  Our Product Range
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate?.("about");
+                  }}
+                  className="hover:text-blue-600 transition-colors"
+                >
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate?.("contact");
+                  }}
+                  className="hover:text-blue-600 transition-colors"
+                >
+                  Connect With Us
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -45,7 +82,7 @@ export default function Footer() {
             <ul className="space-y-4 text-xs text-left">
               <li className="flex gap-3 leading-relaxed">
                 <MapPin size={16} className="text-blue-600 shrink-0" />
-                <span>403, Vireshwar Chambers, M.G.Road, Vile Parle (E), Mumbai - 400057, India.</span>
+                <span>F/705, Zee Corporate Park, CTS Zee Shaan, M.G. Road, Vile Parle East, Mumbai 400057, India.</span>
               </li>
               <li className="flex gap-3 leading-relaxed">
                 <Phone size={16} className="text-blue-600 shrink-0" />
@@ -63,7 +100,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-blue-200 mt-4 pt-4 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase font-bold tracking-widest leading-none">
-          <p>© {new Date().getFullYear()} MP Fiber & Paper Mills Limited.</p>
+          <p>© {new Date().getFullYear()} MP Fiber & Paper Mills Limited</p>
           <div className="flex gap-6">
           </div>
         </div>

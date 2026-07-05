@@ -81,10 +81,10 @@ export default function Hero({ onExploreClick }: { onExploreClick: () => void })
               Precision Engineered Materials
             </div> */}
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-6 sm:mb-8">
-              The Gold Standard in <span className="text-blue-600">Manufacturing.</span>
+              The Gold Standard in <span className="text-blue-600">Merchant Exporting</span>
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-8 sm:mb-10 max-w-xl">
-              MP Fiber & Paper Mills Limited (MPF) delivers high-performance solutions for global industrial sectors. Durable, sustainable, and innovation-led manufacturing excellence.
+              MP Fiber & Paper Mills Limited (MPF) is a trusted merchant exporter supplying paper, board, packaging, and stationery products to buyers around the world through dependable sourcing, quality control, and efficient export execution.
             </p>
             <div className="flex flex-wrap gap-4 mt-4">
               <button 
@@ -99,7 +99,7 @@ export default function Hero({ onExploreClick }: { onExploreClick: () => void })
               </button> */}
             </div>
 
-            <div className="mt-8 sm:mt-14 flex flex-wrap items-center gap-6 sm:gap-8">
+            <div className="mt-4 sm:mt-8 flex flex-wrap items-center gap-6 sm:gap-8">
               <div className="flex flex-col">
                 <span className="text-2xl sm:text-3xl font-extrabold text-blue-600">45+</span>
                 <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Years Excellence</span>

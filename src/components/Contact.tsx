@@ -12,7 +12,7 @@ type ContactProps = {
 };
 
 export default function Contact({ prefilledSubject = "" }: ContactProps) {
-  const [subject, setSubject] = useState(prefilledSubject);
+  const [subject="hgsdvcjsdvjb", setSubject] = useState(prefilledSubject);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState("");
@@ -50,7 +50,7 @@ export default function Contact({ prefilledSubject = "" }: ContactProps) {
       const data = await response.json();
 
       if (!response.ok || !data.success) {
-        throw new Error(data.message || "Unable to submit your inquiry right now.");
+        throw new Error("Unable to submit your inquiry right now.");
       }
 
       setIsSuccess(true);
@@ -60,7 +60,7 @@ export default function Contact({ prefilledSubject = "" }: ContactProps) {
         setSubject("");
       }, 4000);
     } catch (error) {
-      setSubmitError(error instanceof Error ? error.message : "Unable to submit your inquiry right now.");
+      setSubmitError("Unable to submit your inquiry right now.");
     } finally {
       setIsSubmitting(false);
     }
@@ -92,7 +92,7 @@ export default function Contact({ prefilledSubject = "" }: ContactProps) {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 mb-1">Regional Headquarters</h4>
-                  <p className="text-slate-600 text-sm">403, Vireshwar Chambers, M.G.Road, Vile Parle (E), Mumbai - 400057, India.</p>
+                  <p className="text-slate-600 text-sm">F/705, Zee Corporate Park, CTS Zee Shaan, M.G. Road, Vile Parle East, Mumbai 400057, India.</p>
                 </div>
               </a>
 
