@@ -62,7 +62,7 @@ export default function Hero({ onExploreClick }: { onExploreClick: () => void })
   }, []);
 
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-[20px] overflow-hidden bg-slate-50">
+    <section className="relative min-h-[90vh] flex items-center pt-[20px] pb-4 md:pb-8 overflow-hidden bg-blue-50">
       {/* Background patterns */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-blue-50/50 skew-x-12 translate-x-1/2" />

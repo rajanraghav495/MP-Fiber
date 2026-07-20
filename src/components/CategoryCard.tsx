@@ -57,7 +57,7 @@ export default function CategoryCard({ category, onExplore }: CategoryCardProps)
         {/* Explore Button */}
         <button 
           onClick={() => onExplore(category.id)}
-          className="w-full py-2.5 rounded-xl border border-blue-600/20 text-blue-600 text-[10px] sm:text-[11px] font-bold hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all uppercase tracking-wider flex items-center justify-center gap-2 group/btn"
+          className="w-full py-2.5 rounded-xl border border-blue-600/20 text-blue-600 text-[10px] sm:text-[11px] font-bold hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all tracking-wider flex items-center justify-center gap-2 group/btn"
         >
           Explore Grade Options
           <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />

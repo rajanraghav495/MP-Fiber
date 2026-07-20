@@ -104,8 +104,8 @@ export const CATEGORIES: ProductCategory[] = [
   },
   {
     id: "pizza-cartons",
-    name: "Pizza Cartons",
-    description: "A complete range of pizza cartons and corrugated cartons including Brown, Sicilian, and White Pizza Cartons — available with up to 4 colour customized printing and shrink wrap export packing.",
+    name: "PizzaBox & Corr Cartons",
+    description: "A complete range of pizza cartons and corrugated cartons including Brown, Sicilian, and White Pizza Cartons, along with durable 3-ply, 5-ply, and specialized corrugated cartons for secure packing and shipping - available with up to 4 colour customized printing and shrink-wrap export packing.",
     image: pizzaBox,
     keyFeatures: [
       "Brown & White Pizza Cartons",

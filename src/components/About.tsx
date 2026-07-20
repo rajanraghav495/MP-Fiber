@@ -55,7 +55,7 @@ export default function About() {
   ];
 
   return (
-    <section className="py-24 bg-slate-50 overflow-hidden">
+    <section className="py-14 bg-slate-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -104,7 +104,7 @@ export default function About() {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="rounded-3xl border border-emerald-200 bg-gradient-to-br from-emerald-50 to-white p-8 md:p-10 lg:p-12 shadow-sm mb-12 min-h-[420px] lg:min-h-[460px]"
+          className="rounded-3xl border border-slate-200 bg-white p-8 md:p-10 lg:p-12 shadow-sm mb-12"
         >
           <div className="grid gap-8 lg:grid-cols-[1.3fr_0.7fr] items-stretch">
             <div className="w-full flex flex-col justify-center">
@@ -136,7 +136,7 @@ export default function About() {
             </div>
 
             <div className="flex justify-center h-full">
-              <div className="rounded-2xl border border-emerald-200 bg-white shadow-md flex items-center justify-center">
+              <div className="rounded-2xl border border-slate-200 bg-slate-50 shadow-sm flex items-center justify-center">
                 <img
                   src={MSMECertificate}
                   alt="MSME Certificate"

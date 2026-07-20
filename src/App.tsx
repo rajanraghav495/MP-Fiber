@@ -14,7 +14,7 @@ import CategoryCard from "./components/CategoryCard";
 import ProductItemCard from "./components/ProductItemCard";
 import { CATEGORIES, PRODUCTS } from "./constants";
 import { motion, AnimatePresence } from "motion/react";
-import { ArrowRight, ChevronRight, Layers, FileText, Factory, Award, Building, Briefcase, FileCheck2, HelpCircle } from "lucide-react";
+import { ArrowRight, ChevronRight, Layers, FileText, Factory, Award, Building, Briefcase, FileCheck2, HelpCircle, PackageCheck, PackageOpen } from "lucide-react";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("home");
@@ -119,13 +119,13 @@ export default function App() {
                         <span className="text-[10px] uppercase font-extrabold tracking-widest text-blue-600 block mb-2">Industrial Solutions</span>
                         <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Core Product Segments</h2>
                       </div>
-                      <button 
+                      {/* <button 
                         onClick={() => handlePageNavigation("products")}
-                        className="flex items-center gap-2 bg-slate-900 text-white hover:bg-slate-800 px-6 py-3.5 rounded-xl font-bold text-xs uppercase tracking-widest transition-all shadow-md shrink-0"
+                        className="flex items-center gap-2 bg-slate-900 text-white hover:bg-slate-800 px-6 py-3.5 rounded-xl font-bold text-xs tracking-widest transition-all shadow-md shrink-0"
                       >
                         Explore Complete Catalog
                         <ArrowRight size={14} />
-                      </button>
+                      </button> */}
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
@@ -143,7 +143,7 @@ export default function App() {
                   <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
                     <div className="max-w-3xl mb-10 sm:mb-12">
                       <span className="text-[10px] uppercase font-extrabold tracking-widest text-blue-600 block mb-2">Services</span>
-                      <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-3">Export and import solutions tailored for the paper and packaging industry</h2>
+                      <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-3">Export and import solutions</h2>
                       <p className="text-slate-600 text-sm leading-relaxed">
                         We support clients with paper products, stationery, packaging essentials, and sourcing solutions for international trade requirements.
                       </p>
@@ -151,9 +151,9 @@ export default function App() {
 
                     <div className="grid gap-8 lg:grid-cols-2">
                       <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm">
-                        <div className="flex items-center gap-3 mb-5 sm:mb-6">
-                          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-600 text-white">
-                            <FileText size={18} />
+                        <div className="flex items-center gap-3 mb-5 sm:mb-6">                          
+                          <div className="h-11 w-11 rounded bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
+                            <PackageCheck size={25} />
                           </div>
                           <div>
                             <h3 className="text-xl font-semibold text-slate-900">Export</h3>
@@ -171,8 +171,8 @@ export default function App() {
 
                       <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8 shadow-sm">
                         <div className="flex items-center gap-3 mb-5 sm:mb-6">
-                          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-600 text-white">
-                            <Factory size={18} />
+                          <div className="h-11 w-11 rounded bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
+                            <PackageOpen size={25} />
                           </div>
                           <div>
                             <h3 className="text-xl font-semibold text-slate-900">Import</h3>
@@ -180,9 +180,9 @@ export default function App() {
                           </div>
                         </div>
                         <ul className="space-y-3 text-sm text-slate-600">
-                          <li className="flex items-start gap-3"><span className="mt-2 h-2 w-2 rounded-full bg-emerald-500 shrink-0" />Waste paper grades including OCC, DSOCC, NDLKC, Mixed Waste, SWL, and other varieties of white paper.</li>
-                          <li className="flex items-start gap-3"><span className="mt-2 h-2 w-2 rounded-full bg-emerald-500 shrink-0" />New and pre-owned pulp and paper mill machinery sourced from Europe, USA, and China.</li>
-                          <li className="flex items-start gap-3"><span className="mt-2 h-2 w-2 rounded-full bg-emerald-500 shrink-0" />A wide range of paper and paperboard grades to suit diverse industrial needs.</li>
+                          <li className="flex items-start gap-3"><span className="mt-2 h-2 w-2 rounded-full bg-blue-500 shrink-0" />Waste paper grades including OCC, DSOCC, NDLKC, Mixed Waste, SWL, and other varieties of white paper.</li>
+                          <li className="flex items-start gap-3"><span className="mt-2 h-2 w-2 rounded-full bg-blue-500 shrink-0" />New and pre-owned pulp and paper mill machinery sourced from Europe, USA, and China.</li>
+                          <li className="flex items-start gap-3"><span className="mt-2 h-2 w-2 rounded-full bg-blue-500 shrink-0" />A wide range of paper and paperboard grades to suit diverse industrial needs.</li>
                         </ul>
                       </div>
                     </div>
@@ -236,7 +236,7 @@ export default function App() {
                   <div className="flex flex-wrap gap-2.5 mb-10 pb-6 border-b border-slate-200">
                     <button
                       onClick={() => setSelectedCategoryId(null)}
-                      className={`px-5 py-3 rounded-lg text-xs font-bold uppercase tracking-wider transition-all border ${
+                      className={`px-5 py-3 rounded-lg text-xs font-bold tracking-wider transition-all border ${
                         selectedCategoryId === null 
                           ? "bg-blue-600 text-white border-blue-600 shadow-md"
                           : "bg-white text-slate-700 border-slate-200 hover:border-slate-300"
@@ -248,7 +248,7 @@ export default function App() {
                       <button
                         key={cat.id}
                         onClick={() => setSelectedCategoryId(cat.id)}
-                        className={`px-5 py-3 rounded-lg text-xs font-bold uppercase tracking-wider transition-all border ${
+                        className={`px-5 py-3 rounded-lg text-xs font-bold tracking-wider transition-all border ${
                           selectedCategoryId === cat.id 
                             ? "bg-blue-600 text-white border-blue-600 shadow-md"
                             : "bg-white text-slate-700 border-slate-200 hover:border-slate-300"

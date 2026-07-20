@@ -67,7 +67,7 @@ export default function Contact({ prefilledSubject = "" }: ContactProps) {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-14 bg-white">
       <div className="max-w-7xl mx-auto px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <motion.div
