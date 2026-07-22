@@ -17,7 +17,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         <div className="text-left grid md:grid-cols-2 gap-12 items-start">
           {/* <div className="col-span-1 md:col-span-1">
             <div className="mb-6">
-              <img src={logo} alt="MP Fiber Logo" className="h-14 w-auto object-contain" />
+              <img src={logo} alt="M P Fibers Logo" className="h-14 w-auto object-contain" />
             </div>
             <p className="text-xs leading-relaxed mb-6">
               The gold standard in precision-engineered industrial materials since 1978. ISO-Certified quality and sustainable production processes.
@@ -100,7 +100,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           </div>
         </div>
         <div className="border-t border-blue-200 mt-4 pt-4 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase font-bold tracking-widest leading-none">
-          <p>© {new Date().getFullYear()} MP Fiber & Paper Mills Limited</p>
+          <p>© {new Date().getFullYear()} M P Fibers LLC</p>
           <div className="flex gap-6">
           </div>
         </div>

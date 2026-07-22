@@ -84,7 +84,7 @@ export default function Hero({ onExploreClick }: { onExploreClick: () => void })
               The Gold Standard in <span className="text-blue-600">Merchant Exporting</span>
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-8 sm:mb-10 max-w-xl">
-              MP Fiber & Paper Mills Limited (MPF) is a trusted merchant exporter supplying paper, board, packaging, and stationery products to buyers around the world through dependable sourcing, quality control, and efficient export execution.
+              M P Fibers LLC (MPF) is a trusted merchant exporter supplying paper, board, packaging, and stationery products to buyers around the world through dependable sourcing, quality control, and efficient export execution.
             </p>
             <div className="flex flex-wrap gap-4 mt-4">
               <button 

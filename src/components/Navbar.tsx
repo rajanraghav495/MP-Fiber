@@ -28,7 +28,7 @@ export default function Navbar({ activeSection, onNavClick }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-10">
         <div className="flex justify-between h-20 items-center">
           <div className="flex items-center cursor-pointer" onClick={() => onNavClick("home")}>
-            <img src={logo} alt="MP Fiber Logo" className="h-14 w-auto object-contain" />
+            <img src={logo} alt="M P Fibers Logo" className="h-14 w-auto object-contain" />
           </div>
 
           {/* Desktop Nav */}

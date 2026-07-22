@@ -135,7 +135,7 @@ export default function Contact({ prefilledSubject = "" }: ContactProps) {
                 </div>
                 <h3 className="text-2xl font-extrabold text-slate-900 mb-3">Inquiry Submitted</h3>
                 <p className="text-slate-600 text-sm max-w-sm leading-relaxed">
-                  Thank you for contacting MP Fiber & Paper Mills Limited. Our technical team will review your specifications and contact you shortly.
+                  Thank you for contacting M P Fibers LLC. Our technical team will review your specifications and contact you shortly.
                 </p>
               </motion.div>
             ) : null}
