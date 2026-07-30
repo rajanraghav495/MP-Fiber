@@ -55,7 +55,7 @@ export default function Navbar({ activeSection, onNavClick }: NavbarProps) {
               onClick={() => onNavClick("contact")}
               className="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors"
             >
-              Request Quote
+              Request a Quote
             </button>
           </div>
 

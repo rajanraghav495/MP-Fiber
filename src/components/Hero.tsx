@@ -31,8 +31,8 @@ const SLIDES = [
   },
   {
     image: craftPaper,
-    name: "Craft Paper",
-    description: "Premium quality craft paper engineered for strength and versatility across industrial packaging applications.",
+    name: "Kraft Paper",
+    description: "Premium quality Kraft paper engineered for strength and versatility across industrial packaging applications.",
   },
   {
     image: duplexBoard,
@@ -91,7 +91,7 @@ export default function Hero({ onExploreClick }: { onExploreClick: () => void })
                 onClick={onExploreClick}
                 className="group flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-blue-700 transition-all shadow-xl shadow-blue-200"
               >
-                Explore Range
+                View Products
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </button>
               {/* <button className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-lg font-bold text-slate-700 border border-slate-300 hover:bg-slate-100 transition-all">
