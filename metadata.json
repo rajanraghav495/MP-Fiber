@@ -1,8 +1,5 @@
 {
-  "name": "MP Fiber & Paper Mills",
-  "description": "A modern showcase for MP Fiber & Paper Mills Ltd, featuring premium paper products and industrial machinery.",
-  "requestFramePermissions": [],
-  "majorCapabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
-  ]
+  "name": "M P Fibers LLC",
+  "description": "A modern showcase for M P Fibers, featuring premium paper, board, packaging, and stationery products supplied through global export trade.",
+  "requestFramePermissions": []
 }

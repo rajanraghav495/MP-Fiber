@@ -31,8 +31,8 @@ const SLIDES = [
   },
   {
     image: craftPaper,
-    name: "Craft Paper",
-    description: "Premium quality craft paper engineered for strength and versatility across industrial packaging applications.",
+    name: "Kraft Paper",
+    description: "Premium quality Kraft paper engineered for strength and versatility across industrial packaging applications.",
   },
   {
     image: duplexBoard,
@@ -62,7 +62,7 @@ export default function Hero({ onExploreClick }: { onExploreClick: () => void })
   }, []);
 
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-[20px] overflow-hidden bg-slate-50">
+    <section className="relative min-h-[90vh] flex items-center pt-[20px] pb-4 md:pb-8 overflow-hidden bg-blue-50">
       {/* Background patterns */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-blue-50/50 skew-x-12 translate-x-1/2" />
@@ -80,18 +80,18 @@ export default function Hero({ onExploreClick }: { onExploreClick: () => void })
               <span className="w-2 h-2 rounded-full bg-blue-600" />
               Precision Engineered Materials
             </div> */}
-            <h1 className="text-6xl md:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-8">
-              The Gold Standard in <span className="text-blue-600">Manufacturing.</span>
-            </h1>
-            <p className="text-xl text-slate-600 leading-relaxed mb-10 max-w-xl">
-              MP Fiber & Paper Mills Limited (MPF) delivers high-performance solutions for global industrial sectors. Durable, sustainable, and innovation-led manufacturing excellence.
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-6 sm:mb-8">
+              The Gold Standard in <span className="text-blue-600">Merchant Exporting</span>
+            </h2>
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-8 sm:mb-10 max-w-xl">
+              M P Fibers LLC (MPF) is a trusted merchant exporter supplying paper, board, packaging, and stationery products to buyers around the world through dependable sourcing, quality control, and efficient export execution.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 mt-4">
               <button 
                 onClick={onExploreClick}
                 className="group flex items-center justify-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-blue-700 transition-all shadow-xl shadow-blue-200"
               >
-                Explore Range
+                View Products
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </button>
               {/* <button className="flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-lg font-bold text-slate-700 border border-slate-300 hover:bg-slate-100 transition-all">
@@ -99,19 +99,19 @@ export default function Hero({ onExploreClick }: { onExploreClick: () => void })
               </button> */}
             </div>
 
-            <div className="mt-16 flex items-center gap-8">
+            <div className="mt-4 sm:mt-8 flex flex-wrap items-center gap-6 sm:gap-8">
               <div className="flex flex-col">
-                <span className="text-3xl font-extrabold text-blue-600">45+</span>
+                <span className="text-2xl sm:text-3xl font-extrabold text-blue-600">45+</span>
                 <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Years Excellence</span>
               </div>
-              <div className="w-px h-10 bg-slate-200" />
+              <div className="w-px h-8 sm:h-10 bg-slate-200" />
               <div className="flex flex-col">
-                <span className="text-3xl font-extrabold text-blue-600">500+</span>
+                <span className="text-2xl sm:text-3xl font-extrabold text-blue-600">500+</span>
                 <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Client Projects</span>
               </div>
-              <div className="w-px h-10 bg-slate-200" />
+              <div className="w-px h-8 sm:h-10 bg-slate-200" />
               <div className="flex flex-col">
-                <span className="text-3xl font-extrabold text-blue-600">ISO</span>
+                <span className="text-2xl sm:text-3xl font-extrabold text-blue-600">ISO</span>
                 <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">9001:2015 Cert.</span>
               </div>
             </div>

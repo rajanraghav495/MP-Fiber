@@ -13,9 +13,9 @@ export default function Machinery() {
       <div className="max-w-7xl mx-auto px-10">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-20">
           <div>
-            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">Industrial Infrastructure</h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">Export-Ready Supply Network</h2>
             <p className="text-lg text-slate-600 max-w-2xl">
-              Equipped with high-performance manufacturing machines and automated systems, our facility maintains superior efficiency and multi-layered quality control.
+              Backed by strong sourcing partnerships and strict quality control processes, we support global buyers with dependable supply, export coordination, and consistent product availability.
             </p>
           </div>
           <div className="flex gap-4">
@@ -53,7 +53,7 @@ export default function Machinery() {
                   viewport={{ once: true }}
                   className="inline-block px-3 py-1 rounded bg-blue-600 text-white text-[10px] uppercase font-bold tracking-widest mb-4"
                 >
-                  High-Precision Machinery
+                  Export-Ready Supply
                 </motion.span>
                 <h3 className="text-3xl font-extrabold text-white mb-4">{machine.name}</h3>
                 <p className="text-slate-300 text-sm mb-8 max-w-sm">
@@ -86,9 +86,9 @@ export default function Machinery() {
           </div>
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="max-w-xl">
-              <h3 className="text-3xl font-extrabold text-white mb-4">Continuous Infrastructure Upgrades</h3>
+              <h3 className="text-3xl font-extrabold text-white mb-4">Reliable Export Operations</h3>
               <p className="text-slate-400 leading-relaxed">
-                We invest heavily in R&D and digital transformation to maintain our position at the forefront of global industrial standards.
+                We continue to strengthen our sourcing network, logistics coordination, and quality systems to remain a dependable partner for international buyers.
               </p>
             </div>
             <button className="whitespace-nowrap px-8 py-4 bg-white text-slate-900 font-bold rounded-xl hover:bg-slate-100 transition-colors shadow-2xl">

@@ -12,8 +12,10 @@ type ContactProps = {
 };
 
 export default function Contact({ prefilledSubject = "" }: ContactProps) {
-  const [subject, setSubject] = useState(prefilledSubject);
+  const [subject="hgsdvcjsdvjb", setSubject] = useState(prefilledSubject);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,19 +28,46 @@ export default function Contact({ prefilledSubject = "" }: ContactProps) {
     }
   }, [prefilledSubject]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate API Submission
-    setIsSuccess(true);
-    setTimeout(() => {
-      setIsSuccess(false);
-      setFormData({ name: "", email: "", message: "" });
-      setSubject("");
-    }, 4000);
+    setIsSubmitting(true);
+    setSubmitError("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject,
+          message: formData.message
+        })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error("Unable to submit your inquiry right now.");
+      }
+
+      setIsSuccess(true);
+      setTimeout(() => {
+        setIsSuccess(false);
+        setFormData({ name: "", email: "", message: "" });
+        setSubject("");
+      }, 4000);
+    } catch (error) {
+      setSubmitError("Unable to submit your inquiry right now.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-14 bg-white">
       <div className="max-w-7xl mx-auto px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <motion.div
@@ -46,21 +75,26 @@ export default function Contact({ prefilledSubject = "" }: ContactProps) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-8">Connect With Us</h2>
-            <p className="text-lg text-slate-600 mb-12 max-w-md font-medium">
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 mb-6 sm:mb-8">Connect With Us</h2>
+            <p className="text-base sm:text-lg text-slate-600 mb-8 sm:mb-12 max-w-md font-medium">
               Have a question about our industrial solutions or want to discuss a large-scale contract partnership? Our engineering team is ready to assist.
             </p>
 
-            <div className="space-y-8">
-              <div className="flex gap-6">
+            <div className="space-y-8 mt-12">
+              <a
+                href="https://www.google.com/maps/place/MPFIBERS+LLC/@19.1057205,72.8461116,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7c9c7ff71ffc5:0xcaa1b1438128864b!8m2!3d19.1057205!4d72.8461116!16s%2Fg%2F11crzszdnt?hl=en-US&entry=ttu&g_ep=EgoyMDI2MDYyMy4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-6 rounded-2xl transition-colors hover:bg-slate-50/80"
+              >
                 <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-blue-600 shrink-0 shadow-sm">
                   <MapPin size={24} />
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 mb-1">Regional Headquarters</h4>
-                  <p className="text-slate-600 text-sm">2, New Palasia, Indore, Madhya Pradesh 452001, India</p>
+                  <p className="text-slate-600 text-sm">F/705, Zee Corporate Park, CTS Zee Shaan, M.G. Road, Vile Parle East, Mumbai 400057, India.</p>
                 </div>
-              </div>
+              </a>
 
               <div className="flex gap-6">
                 <div className="w-14 h-14 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-blue-600 shrink-0 shadow-sm">
@@ -68,7 +102,7 @@ export default function Contact({ prefilledSubject = "" }: ContactProps) {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 mb-1">Direct Line</h4>
-                  <p className="text-slate-600 text-sm">+91 731 123 4567 | +91 731 987 6543</p>
+                  <p className="text-slate-600 text-sm">+91 22 66964302 | +91 22 67983728</p>
                 </div>
               </div>
 
@@ -78,7 +112,7 @@ export default function Contact({ prefilledSubject = "" }: ContactProps) {
                 </div>
                 <div>
                   <h4 className="font-bold text-slate-900 mb-1">Official Inquiry</h4>
-                  <p className="text-slate-600 text-sm">sales@mpfiber.com | info@mpfiber.com</p>
+                  <p className="text-slate-600 text-sm">info@mpfiber.com | mpfiber53@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -101,7 +135,7 @@ export default function Contact({ prefilledSubject = "" }: ContactProps) {
                 </div>
                 <h3 className="text-2xl font-extrabold text-slate-900 mb-3">Inquiry Submitted</h3>
                 <p className="text-slate-600 text-sm max-w-sm leading-relaxed">
-                  Thank you for contacting MP Fiber & Paper Mills Limited. Our technical team will review your specifications and contact you shortly.
+                  Thank you for contacting M P Fibers LLC. Our technical team will review your specifications and contact you shortly.
                 </p>
               </motion.div>
             ) : null}
@@ -156,10 +190,17 @@ export default function Contact({ prefilledSubject = "" }: ContactProps) {
                 />
               </div>
 
-              <button className="flex items-center justify-center gap-3 w-full bg-blue-600 hover:bg-blue-700 text-white py-5 rounded-xl font-bold shadow-xl shadow-blue-600/20 hover:translate-y-[-2px] transition-all uppercase tracking-widest text-xs">
-                Submit Inquiry
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="flex items-center justify-center gap-3 w-full bg-blue-600 hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70 text-white py-5 rounded-xl font-bold shadow-xl shadow-blue-600/20 hover:translate-y-[-2px] transition-all uppercase tracking-widest text-xs"
+              >
+                {isSubmitting ? "Sending..." : "Submit Inquiry"}
                 <Send size={18} />
               </button>
+              {submitError ? (
+                <p className="text-sm text-red-600 text-center">{submitError}</p>
+              ) : null}
             </form>
           </motion.div>
         </div>
